@@ -1,14 +1,14 @@
 import { StyleSheet } from "react-native";
 
-const LoginStyles = StyleSheet.create( {
+const SignupStyles = StyleSheet.create( {
     logo: {
-        width: 200,
-        height: 200,
+        width: 75,
+        height: 75,
         resizeMode: 'contain'
     },
-    loginDisplay: {
+    signupDisplay: {
         width: '100%',
-        height: '40%',
+        height: '20%',
         alignItems: 'center',
         position: 'relative'
     },
@@ -21,18 +21,21 @@ const LoginStyles = StyleSheet.create( {
         fontWeight: '500'
     },
     inputDisplay: {
-        paddingRight: 40,
-        paddingLeft: 40,
+        paddingRight: 20,
+        paddingLeft: 20,
         width: '100%',
-        height: 200,
+        alignItems: "center"
         // backgroundColor: 'blue'
     },
     inputWrapper: {
         borderWidth: 0.2,
         borderColor: 'red',
         borderRadius: 10,
-        width: 300,
+        width: 350,
         marginTop: 20
+    },
+    firstLastNameWrapper: {
+        width: 170,
     },
     inputBoxDisplay: {
         height: 40,
@@ -51,7 +54,8 @@ const LoginStyles = StyleSheet.create( {
         borderRadius: 20,
         marginLeft: 50,
         marginRight: 50,
-        padding: 5
+        padding: 5,
+        marginTop: 80
     },
     signInText: {
         color: 'white',
@@ -63,7 +67,7 @@ const LoginStyles = StyleSheet.create( {
         color: '#888888'
     },
     registerHereWrapper: {
-        marginTop: 120
+        marginTop: 70
     },
     registerHere: {
         textAlign: 'center',
@@ -74,4 +78,4 @@ const LoginStyles = StyleSheet.create( {
     }
 })
 
-export default LoginStyles;
+export default SignupStyles;
