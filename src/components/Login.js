@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Image, Pressable, Text, TextInput, TouchableOpacity, View } from "react-native";
 import LoginStyles from "../styles/LoginStyles";
 
-const Login = (props) => {
+const Login = ({ navigation }) => {
     const [username, setUsername] = useState("")
     const [password, setPassword] = useState("")
 
@@ -12,7 +12,7 @@ const Login = (props) => {
             <View style={LoginStyles.loginDisplay}>
                 <Image
                     style={LoginStyles.logo}
-                    source={require('../Assets/images/logo.png')}
+                    source={require('../assets/images/logo.png')}
                 />
                 <Text style={LoginStyles.titleView}>Login</Text>
             </View>
@@ -55,7 +55,7 @@ const Login = (props) => {
             {/* Don't have an account */}
             <View style={LoginStyles.registerHereWrapper}>
                 <Text style={LoginStyles.noAccountText}>Don't have an account?</Text>
-                <TouchableOpacity onPress={(e) => console.log("Register Here pressed!")}>
+                <TouchableOpacity onPress={(e) => navigation.navigate('Signup')}>
                     <Text style={LoginStyles.registerHere}>Register Here!</Text>
                 </TouchableOpacity>
             </View>
