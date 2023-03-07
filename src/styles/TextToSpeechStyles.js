@@ -1,6 +1,6 @@
 import { StyleSheet } from "react-native";
 
-const LoginStyles = StyleSheet.create( {
+const TextToSpeechStyles = StyleSheet.create( {
     logo: {
         width: 60,
         height: 70,
@@ -75,4 +75,4 @@ const LoginStyles = StyleSheet.create( {
    
 })
 
-export default LoginStyles;
+export default TextToSpeechStyles;
