@@ -33,7 +33,7 @@ const LoginStyles = StyleSheet.create( {
         alignContent: "center",
         justifyContent: "center",
         alignSelf: "center",
-        height: 530,
+        height: 520,
         marginTop: -180,
         backgroundColor: '#F1F3F6',
         
@@ -44,17 +44,16 @@ const LoginStyles = StyleSheet.create( {
         fontSize: 20
     },
     input: {
-      height: 40,
+      height: 500,
       margin: 12,
       padding: 10,
+      marginTop: 20,
       fontSize: 17,
-      
-      
     },
     signInButtonWrapper: {
         backgroundColor: 'red',
         padding: 5,
-        marginTop: 110,
+        marginTop: 100,
         width: 80,
         height: 80,
         borderRadius: 80/2,
