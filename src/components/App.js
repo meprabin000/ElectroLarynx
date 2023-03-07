@@ -11,6 +11,7 @@ import { FlatList, StyleSheet, View, Text } from 'react-native';
 import Signup from './Signup';
 import Login from './Login';
 import TextToSpeech from './TextToSpeech'
+import Settings from './Settings'
 import AppStyles from '../styles/AppStyles';
 
 const App = () => {
