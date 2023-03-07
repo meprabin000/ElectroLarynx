@@ -7,7 +7,7 @@ const TextToSpeech = (props) => {
     const [password, setPassword] = useState("")
     const [text, onChangeText] = useState("");
 
-    
+
     return (
         <View style={TextToSpeechStyles.mainView}>
             {/* Logo image */}
@@ -18,9 +18,7 @@ const TextToSpeech = (props) => {
                 />
                 <Text style={TextToSpeechStyles.titleView}>Text to Speech Converter</Text>
                 
-                <Text>
-                  Characters Left: {text.length}/1000
-                </Text>
+                
             </View>
 
             <View style={TextToSpeechStyles.inputDisplay}>
@@ -34,12 +32,11 @@ const TextToSpeech = (props) => {
                   placeholder={"What would you like to say?\nEnter your text here."}
                   onChangeText={text => onChangeText(text)}
                   
-                 
-                 
-                  
-                  
                 />
                 </View>  
+                <Text style={TextToSpeechStyles.characterView}>
+                  {text.length}/1000
+                </Text>
                 
             </View>
 

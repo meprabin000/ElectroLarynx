@@ -20,6 +20,12 @@ const LoginStyles = StyleSheet.create( {
         fontSize: 25,
         fontWeight: '300'
     },
+    characterView: {
+      color: '#908484',
+      marginTop: -20,
+      
+      marginLeft: 250,
+  },
     inputDisplay: {
         paddingRight: 40,
         paddingLeft: 40,
