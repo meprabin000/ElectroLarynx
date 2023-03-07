@@ -21,7 +21,7 @@ const Signup = (props) => {
                     style={SignupStyles.logo}
                     source={require('../assets/images/logo.png')}
                 />
-                <Text style={SignupStyles.titleView}>Sign Up</Text>
+                <Text style={SignupStyles.titleView}>Welcome!</Text>
             </View>
 
             {/* Username Password Box */}

@@ -18,7 +18,7 @@ const SignupStyles = StyleSheet.create( {
     },
     titleView: {
         fontSize: 40,
-        fontWeight: '500'
+        fontWeight: '400'
     },
     inputDisplay: {
         paddingRight: 20,
@@ -32,7 +32,8 @@ const SignupStyles = StyleSheet.create( {
         borderColor: 'red',
         borderRadius: 10,
         width: 350,
-        marginTop: 20
+        marginTop: 20,
+        backgroundColor: '#F9F9F9'
     },
     firstLastNameWrapper: {
         width: 170,
@@ -40,7 +41,8 @@ const SignupStyles = StyleSheet.create( {
     inputBoxDisplay: {
         height: 40,
         padding: 10,
-        fontSize: 20
+        fontSize: 17,
+        
     },
     forgotPasswordButton: {
         fontSize: 15,
@@ -73,6 +75,7 @@ const SignupStyles = StyleSheet.create( {
         textAlign: 'center',
         paddingTop: 5,
         fontSize: 15,
+        color:'red',
         textDecorationLine: 'underline',
         fontWeight: '400'
     }

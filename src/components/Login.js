@@ -14,7 +14,7 @@ const Login = (props) => {
                     style={LoginStyles.logo}
                     source={require('../assets/images/logo.png')}
                 />
-                <Text style={LoginStyles.titleView}>Login</Text>
+                
             </View>
 
             {/* Username Password Box */}
