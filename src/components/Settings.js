@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Image, Pressable, Text, TextInput, TouchableOpacity, View } from "react-native";
+import { Divider } from "react-native-flex-layout";
 import SettingStyles from "../styles/SettingStyles";
 
 const Settings = (props) => {
@@ -18,15 +19,12 @@ const Settings = (props) => {
             {/* firstName lastName username */}
             <View style={SettingStyles.textDisplay}>
 
-                
-                    
                         <Text style={SettingStyles.name}>firstName lastName</Text>
                         <Text style={SettingStyles.name}>@username</Text>
-                        <Text style={SettingStyles.subText}>Joined ...</Text>  
+                        <Text style={SettingStyles.subText}>Joined Day Month Year</Text> 
+                        <Divider style= {SettingStyles.dividerDesign}></Divider> 
             
             {/* voice selection */}
-            
-                        <Text style={SettingStyles.name}>---------</Text>
                         <Text style={SettingStyles.subText}>Voice Selection</Text>  
                         {/* Custom Voice Button */}
                             <View style={SettingStyles.voiceButtonWrapper}>
@@ -34,7 +32,8 @@ const Settings = (props) => {
                             <Text style={SettingStyles.voiceButtonText}>Custom Voice</Text>
                                 </TouchableOpacity>   
                             </View>
-                            <Text style={SettingStyles.name}>---------</Text>
+                            <Divider style= {SettingStyles.dividerDesign}></Divider>
+                            
 
                         {/* Default Voice Button */}
                         <View style={SettingStyles.defaultButtonWrapper}>
@@ -44,50 +43,34 @@ const Settings = (props) => {
                             </View>
 
                         <Text style={SettingStyles.subDefaultText}>Select the voice you would like to output from your Electrolarynx device.</Text>  
-
-                        <Text style={SettingStyles.name}>---------</Text>
-               
-
-                        </View>
-                        
-
-
-
-               
-                
-
-            
-
-            {/* Disconnect Button */}
-            <View style={SettingStyles.ButtonWrapper}>
+                        <Divider style= {SettingStyles.dividerDesign}></Divider>
+            {/* voice selection */}
+                <Text style={SettingStyles.subText}>Bluetooth Connectivity</Text>  
+                <Text style={SettingStyles.name}>Electrolarynx</Text>
+                <View style={SettingStyles.ButtonWrapper}>
             <TouchableOpacity onPress={(e) => console.log("Disconnect Pressed")}>
-            <Text style={SettingStyles.buttonText}>Disconnect</Text>
+            <Text style={SettingStyles.otherButtonText}>Disconnect</Text>
                 </TouchableOpacity>   
             </View>
-            
-
+            <Divider></Divider>
             {/* Report Button */}
             <View style={SettingStyles.ButtonWrapper}>
             <TouchableOpacity onPress={(e) => console.log("Report Pressed")}>
-            <Text style={SettingStyles.buttonText}>Report a Problem</Text>
+            <Text style={SettingStyles.otherButtonText}>Report a Problem</Text>
                 </TouchableOpacity>   
             </View>
-
             {/* Logout Button */}
             <View style={SettingStyles}>
             <TouchableOpacity onPress={(e) => console.log("Logout Pressed")}>
             <Text style={SettingStyles.logoutButton}>Log out</Text>
                 </TouchableOpacity>   
             </View>
+                
+                       
+                        
 
-          
-          
-          
-          
-            
-            
-
-            
+            </View>
+                        
         </View>
     );
 }

@@ -63,7 +63,7 @@ const SettingStyles = StyleSheet.create( {
     ButtonWrapper: {
         backgroundColor: '#FFF1F1',
         padding: 5,
-        marginTop: 100,
+        margin: 20,
         width: 260,
         height: 40,
         borderRadius: 10,
@@ -104,6 +104,11 @@ const SettingStyles = StyleSheet.create( {
         fontSize: 15,
         paddingLeft: 30,
     },
+    otherButtonText: {
+        color: 'black',
+        fontSize: 15,
+        textAlign: 'center',
+    },
     name: {
       fontSize: 15,
       padding:4,
@@ -120,21 +125,23 @@ const SettingStyles = StyleSheet.create( {
   },
   subDefaultText: {
     color: '#878787',
-    padding:10,
+    padding:17,
     fontSize: 13,
+    textAlign: 'center',
     
-
-
 },
 
   logoutButton: {
-    color: '#696969',
+    //color: '#696969',
     textAlign: 'center',
     fontSize: 15,
     padding: 20,
     textDecorationLine: "underline",
     
+  },
 
+  dividerDesign: {
+    margin: 5,
   },
 })
 
