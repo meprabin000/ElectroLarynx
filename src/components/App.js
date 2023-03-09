@@ -12,11 +12,12 @@ import Signup from './Signup';
 import Login from './Login';
 import TextToSpeech from './TextToSpeech'
 import AppStyles from '../styles/AppStyles';
+import ForgotPassword from './ForgotPassword';
 
 const App = () => {
   return (
     <View style={AppStyles.appView}>
-      <Login />
+      <Login/>
     </View>
   );
 }
