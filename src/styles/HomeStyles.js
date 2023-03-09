@@ -21,7 +21,7 @@ const HomeStyles = StyleSheet.create( {
         
     },
     titleView: {
-      fontSize: 25,
+      fontSize: 30,
       fontWeight: '400',
       marginLeft: -200,
       paddingLeft: 100,
@@ -47,21 +47,55 @@ const HomeStyles = StyleSheet.create( {
         padding: 10,
         fontSize: 20
     },
-    forgotPasswordButton: {
+    text: {
         fontSize: 15,
-        textAlign: 'center'
+        padding: 10,   
+        marginLeft: 115,
+        
+    },
+    text2: {
+        marginLeft: -150,
+        padding: 10,
+        fontSize: 15,
+
     },
     forgotPasswordButtonWrapper: {
-        marginTop: 20,
+      
+    },
+    genButton: {
+        flexDirection: 'row',
+        margin: 3,
+    },
+    headerDisplay: {
+        flexDirection: 'row',
+        alignContent: 'center',
+        margin: 10,
+        marginRight: -150,
+       justifyContent: "center",
+       marginTop: 20,
+    },
+    sliderWrapper: {
+        backgroundColor: '#FFD9D7',
+        borderRadius: 10,
+        height: 190,
+        width: '90%', 
+        alignItems: 'center',
+        justifyContent: "center",
+    },
+    innerSliders: {
+        backgroundColor: '#FFF1F1',
+        borderRadius: 10,
+        height: 50,
+        width: '80%', 
+        margin: 10,
     },
     batteryButtonWrapper: {
       backgroundColor: '#34C759',
       padding: 5,
-      marginLeft: 45,
-      marginTop: 15,
-      width: 80,
-      height: 80,
-      borderRadius: 80/2,
+      margin: 17,
+      width: 85,
+      height: 85,
+      borderRadius: 85/2,
       alignContent: "flex-start",
       justifyContent: "center",
       alignSelf: "flex-start",
@@ -69,11 +103,10 @@ const HomeStyles = StyleSheet.create( {
       playButtonWrapper: {
         backgroundColor: '#EF233C',
         padding: 5,
-        marginLeft: 150,
-        marginTop: 15,
-        width: 80,
-        height: 80,
-        borderRadius: 80/2,
+        margin: 17,
+        width: 85,
+        height: 85,
+        borderRadius: 85/2,
         alignContent: "flex-start",
         justifyContent: "center",
         alignSelf: "flex-start",
@@ -81,16 +114,15 @@ const HomeStyles = StyleSheet.create( {
     bleButtonWrapper: {
       backgroundColor: '#0A84FF',
       padding: 5,
-      marginRight: 45,
-      marginTop: 15,
-      width: 80,
-      height: 80,
-      borderRadius: 80/2,
+      margin: 17,
+      width: 85,
+      height: 85,
+      borderRadius: 85/2,
       alignContent: "flex-end",
       justifyContent: "center",
       alignSelf: "flex-end",
     },
-    signInText: {
+    buttonText: {
         color: 'white',
         textAlign: 'center',
         fontSize: 25
@@ -99,22 +131,40 @@ const HomeStyles = StyleSheet.create( {
         textAlign: 'center',
         color: '#888888'
     },
-    registerHereWrapper: {
-        marginTop: 120
-    },
-    registerHere: {
-        textAlign: 'center',
-        paddingTop: 5,
-        fontSize: 15,
-        textDecorationLine: 'underline',
-        fontWeight: '400'
-    },
     input: {
       height: 500,
       margin: 12,
       padding: 10,
       marginTop: 30,
       fontSize: 17,
+    },
+    dateText:{
+     color: '#878787',
+     textAlign: 'left',
+     marginLeft: -260,
+     padding: 5,
+    },
+    redCircle: {
+      width: 10,
+      height: 10,
+      borderRadius: 10/2,
+      backgroundColor: 'red',
+      marginRight: 10,
+    },
+    subtitleWrapperEL: {
+       flexDirection: 'row',   
+       margin: 10,
+       marginLeft: -150,  
+    },
+    subtitleWrapperVC: {
+        flexDirection: 'row',   
+        margin: 10,
+        marginLeft: -200,  
+        padding: 10,
+     },
+    text3: {
+        marginTop: -4,
+        fontSize: 17,
     },
    
 })
