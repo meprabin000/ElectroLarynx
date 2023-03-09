@@ -3,9 +3,7 @@ import { Image, Pressable, Text, TextInput, TouchableOpacity, View } from "react
 import SettingStyles from "../styles/SettingStyles";
 
 const Settings = (props) => {
-    const [username, setUsername] = useState("")
-    const [password, setPassword] = useState("")
-
+   
     return (
         <View style={SettingStyles.mainView}>
             {/* Logo image */}
@@ -18,19 +16,47 @@ const Settings = (props) => {
             </View>
 
             {/* firstName lastName username */}
-            <View style={SettingStyles.inputDisplay}>
+            <View style={SettingStyles.textDisplay}>
 
-                <View style={SettingStyles.nameButtonWrapper}>
+                
                     
-                        <Text style={SettingStyles.nameButton}>firstName lastName</Text>
-                        <Text style={SettingStyles.nameButton}>@username</Text>
-                        
-                </View>
+                        <Text style={SettingStyles.name}>firstName lastName</Text>
+                        <Text style={SettingStyles.name}>@username</Text>
+                        <Text style={SettingStyles.subText}>Joined ...</Text>  
+            
+            {/* voice selection */}
+            
+                        <Text style={SettingStyles.name}>---------</Text>
+                        <Text style={SettingStyles.subText}>Voice Selection</Text>  
+                        {/* Custom Voice Button */}
+                            <View style={SettingStyles.voiceButtonWrapper}>
+                            <TouchableOpacity onPress={(e) => console.log("Disconnect Pressed")}>
+                            <Text style={SettingStyles.voiceButtonText}>Custom Voice</Text>
+                                </TouchableOpacity>   
+                            </View>
+                            <Text style={SettingStyles.name}>---------</Text>
 
-            {/* Title Button */}
-            <View style={SettingStyles}>
-            <Text style={SettingStyles}>Electrolarynx</Text>
-            </View>
+                        {/* Default Voice Button */}
+                        <View style={SettingStyles.defaultButtonWrapper}>
+                            <TouchableOpacity onPress={(e) => console.log("Disconnect Pressed")}>
+                            <Text style={SettingStyles.voiceButtonText}>Default Voice</Text>
+                                </TouchableOpacity>   
+                            </View>
+
+                        <Text style={SettingStyles.subDefaultText}>Select the voice you would like to output from your Electrolarynx device.</Text>  
+
+                        <Text style={SettingStyles.name}>---------</Text>
+               
+
+                        </View>
+                        
+
+
+
+               
+                
+
+            
 
             {/* Disconnect Button */}
             <View style={SettingStyles.ButtonWrapper}>
@@ -38,6 +64,7 @@ const Settings = (props) => {
             <Text style={SettingStyles.buttonText}>Disconnect</Text>
                 </TouchableOpacity>   
             </View>
+            
 
             {/* Report Button */}
             <View style={SettingStyles.ButtonWrapper}>
@@ -56,7 +83,7 @@ const Settings = (props) => {
           
           
           
-          </View>
+          
             
             
 

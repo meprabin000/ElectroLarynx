@@ -25,13 +25,17 @@ const SettingStyles = StyleSheet.create( {
       marginTop: -20,
       marginLeft: 250,
   },
-    inputDisplay: {
+    textDisplay: {
         paddingRight: 40,
         paddingLeft: 40,
         width: '100%',
-        height: 200,
-        // backgroundColor: 'blue'
+        //height: 180,
+        marginTop:-200,
+        //backgroundColor: 'blue',
+        
     },
+   
+   
     inputWrapper: {
         borderRadius: 10,
         width: 330,
@@ -41,6 +45,7 @@ const SettingStyles = StyleSheet.create( {
         height: 520,
         marginTop: -180,
         backgroundColor: '#F1F3F6',
+        
         
     },
     inputBoxDisplay: {
@@ -64,7 +69,28 @@ const SettingStyles = StyleSheet.create( {
         borderRadius: 10,
         alignContent: "center",
         justifyContent: "center",
-        alignSelf: "center",
+        alignSelf: "center",  
+    },
+    voiceButtonWrapper: {
+        padding: 5,
+        width: 300,
+        height: 40,
+        borderRadius: 10,
+        alignContent: "center",
+        justifyContent: "center",
+        alignSelf: "center",  
+        //backgroundColor: 'red',
+        
+    },
+    defaultButtonWrapper: {
+        padding: 5,
+        width: 300,
+        height: 40,
+        borderRadius: 10,
+        alignContent: "center",
+        justifyContent: "center",
+        alignSelf: "center",  
+        //backgroundColor: 'red',
     },
     buttonText: {
         color: 'black',
@@ -72,14 +98,34 @@ const SettingStyles = StyleSheet.create( {
         textAlign: 'center',
         fontSize: 15
     },
-    nameButton: {
+    voiceButtonText: {
+        color: 'black',
+        textAlign: 'left',
+        fontSize: 15,
+        paddingLeft: 30,
+    },
+    name: {
       fontSize: 15,
-      padding:5,
+      padding:4,
+      //backgroundColor: 'red',
       
   },
-  nameButtonWrapper: {
-      marginTop: -185,
+  nameWrapper: {
+    marginTop: -150,
+},
+    subText: {
+        color: '#878787',
+        padding:5,
+        fontSize: 13,
   },
+  subDefaultText: {
+    color: '#878787',
+    padding:10,
+    fontSize: 13,
+    
+
+
+},
 
   logoutButton: {
     color: '#696969',
@@ -87,6 +133,7 @@ const SettingStyles = StyleSheet.create( {
     fontSize: 15,
     padding: 20,
     textDecorationLine: "underline",
+    
 
   },
 })
