@@ -17,7 +17,7 @@ import AppStyles from '../styles/AppStyles';
 const App = () => {
   return (
     <View style={AppStyles.appView}>
-      <Settings />
+      <Login />
     </View>
   );
 }
