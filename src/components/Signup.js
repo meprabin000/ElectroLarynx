@@ -19,7 +19,7 @@ const Signup = ({ navigation }) => {
             <View style={SignupStyles.signupDisplay}>
                 <Image
                     style={SignupStyles.logo}
-                    source={require('../assets/images/logo.png')}
+                    source={require('../Assets/images/logo.png')}
                 />
                 <Text style={SignupStyles.titleView}>Sign Up</Text>
             </View>

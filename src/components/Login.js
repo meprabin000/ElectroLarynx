@@ -12,7 +12,7 @@ const Login = ({ navigation }) => {
             <View style={LoginStyles.loginDisplay}>
                 <Image
                     style={LoginStyles.logo}
-                    source={require('../assets/images/logo.png')}
+                    source={require('../Assets/images/logo.png')}
                 />
                 <Text style={LoginStyles.titleView}>Login</Text>
             </View>
