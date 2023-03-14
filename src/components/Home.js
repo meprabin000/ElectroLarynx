@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Image, Pressable, Text, TextInput, TouchableOpacity, View } from "react-native";
 import HomeStyles from "../styles/HomeStyles";
+import Mic from './Mic.js'
 
 const Login = (props) => {
     const [username, setUsername] = useState("")
@@ -21,7 +22,7 @@ const Login = (props) => {
             <View style={HomeStyles.headerDisplay}>
                 <Image
                     style={HomeStyles.logo}
-                    source={require('../assets/images/logo.png')}
+                    source={require('../Assets/images/logo.png')}
                 />
                 <Text style={HomeStyles.titleView}>Hello,{"\n"}@username!</Text>
                 </View>
@@ -82,6 +83,10 @@ const Login = (props) => {
                         </TouchableOpacity>
                 </View>
             </View>
+                {/*Vocal Indicator Wrapper */}
+                <View style={HomeStyles.sliderWrapper}>
+                    {/*<Mic />*/}
+                </View>
                   
 
 

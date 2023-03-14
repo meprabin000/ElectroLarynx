@@ -14,7 +14,7 @@ const TextToSpeech = (props) => {
             <View style={TextToSpeechStyles.loginDisplay}>
                 <Image
                     style={TextToSpeechStyles.logo}
-                    source={require('../assets/images/logo.png')}
+                    source={require('../Assets/images/logo.png')}
                 />
                 <Text style={TextToSpeechStyles.titleView}>Text to Speech Converter</Text>
                 

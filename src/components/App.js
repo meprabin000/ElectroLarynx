@@ -12,12 +12,13 @@ import Signup from './Signup';
 import Login from './Login';
 import TextToSpeech from './TextToSpeech';
 import Home from './Home';
+import Mic from './Mic';
 import AppStyles from '../styles/AppStyles';
 
 const App = () => {
   return (
     <View style={AppStyles.appView}>
-      <Login />
+      <Mic />
     </View>
   );
 }
