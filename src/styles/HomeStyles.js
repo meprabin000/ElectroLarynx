@@ -166,6 +166,17 @@ const HomeStyles = StyleSheet.create( {
         marginTop: -4,
         fontSize: 17,
     },
+    container: {
+        width: '90%',
+        marginLeft: 10,
+        marginRight: 10,
+        alignItems: 'stretch',
+        justifyContent: 'center',    
+    },
+    text4: {
+        marginRight: 250,
+        
+    },
    
 })
 

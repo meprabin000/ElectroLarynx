@@ -1,11 +1,13 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, setState } from "react";
 import { Image, Pressable, Text, TextInput, TouchableOpacity, View } from "react-native";
+import {Slider} from '@miblanchard/react-native-slider';
 import HomeStyles from "../styles/HomeStyles";
 
 const Login = (props) => {
     const [username, setUsername] = useState("")
     const [password, setPassword] = useState("")
     const [date, setDate] = useState(null);
+    state = { value: 5, };
 
     useEffect(() => {
         let today = new Date();
@@ -62,14 +64,28 @@ const Login = (props) => {
                     <View style={HomeStyles.sliderWrapper}>
                         <Pressable onPress={(e) => console.log("Slider Clicked!")}>
                         </Pressable>
+                        <Text style={HomeStyles.text4}>Volume: {this.state.value}</Text>
                         <View style={HomeStyles.innerSliders}>
                         <Pressable onPress={(e) => console.log("voice slider!")}>
-                    <Text style={HomeStyles.text}>volume</Text>
                         </Pressable>
+                        
+                        <View style={HomeStyles.container}>
+                                <Slider
+                                    value={this.state.value}
+                                    onValueChange={value => this.setState({value})}
+                                />
                         </View>
+                    </View>
+                    <Text style={HomeStyles.text4}>Pitch: {this.state.value}</Text>
                         <View style={HomeStyles.innerSliders}>
                         <Pressable onPress={(e) => console.log("pitch slider!")}>
-                    <Text style={HomeStyles.text}>pitch</Text>
+                        <View style={HomeStyles.container}>
+                            
+                                <Slider
+                                    value={this.state.value}
+                                    onValueChange={value => this.setState({value})}
+                                />
+                        </View>
                         </Pressable>
                         </View>
                     </View>
@@ -82,6 +98,7 @@ const Login = (props) => {
                         </TouchableOpacity>
                 </View>
             </View>
+            
                   
 
 
