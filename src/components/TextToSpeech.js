@@ -3,14 +3,14 @@ import { Image, Pressable, Text, TextInput, TouchableOpacity, View, SafeAreaView
 import TextToSpeechStyles from "../styles/TextToSpeechStyles";
 import Tts from 'react-native-tts';
 import Slider from '@react-native-community/slider';
-import ToS_Test3 from './ToS_Test3';
+
 
 const TextToSpeech = (props) => {
-    const [username, setUsername] = useState("")
-    const [password, setPassword] = useState("")
-    //const [text, onChangeText] = useState("");
+  const [username, setUsername] = useState("")
+  const [password, setPassword] = useState("")
+  //const [text, onChangeText] = useState("");
 
-    const [voices, setVoices] = useState([]);
+  const [voices, setVoices] = useState([]);
   const [ttsStatus, setTtsStatus] = useState('initiliazing');
   const [selectedVoice, setSelectedVoice] = useState(null);
   const [speechRate, setSpeechRate] = useState(0.5);
