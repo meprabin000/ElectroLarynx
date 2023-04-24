@@ -12,7 +12,7 @@ const Login = (props) => {
             <View style={LoginStyles.loginDisplay}>
                 <Image
                     style={LoginStyles.logo}
-                    source={require('../Assets/images/logo.png')}
+                    source={require('../assets/images/logo.png')}
                 />
                 <Text style={LoginStyles.titleView}>Login</Text>
             </View>
