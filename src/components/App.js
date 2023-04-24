@@ -36,7 +36,18 @@ const App = () => {
         component={Signup}
         options={{title:"Register"}}
        // options={{headerShown:false}}
-
+      />
+      <Stack.Screen
+        name="Home"
+        component={Home}
+        options={{title:"Home"}}
+       // options={{headerShown:false}}
+      />
+      <Stack.Screen
+        name="TextToSpeech"
+        component={TextToSpeech}
+        options={{title:"TextToSpeech"}}
+       // options={{headerShown:false}}
       />
     </Stack.Navigator>
   </NavigationContainer>

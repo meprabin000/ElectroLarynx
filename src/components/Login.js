@@ -1,15 +1,17 @@
 import { useState } from "react";
-import { Image, Pressable, Text, TextInput, TouchableOpacity, View } from "react-native";
+import { Button, Image, Pressable, Text, TextInput, TouchableOpacity, View } from "react-native";
 import LoginStyles from "../styles/LoginStyles";
 import * as React from 'react';
 import { useNavigation } from '@react-navigation/native';
 import {StackNavigator} from 'react-navigation';
 
 
- const Login = ({navigation}) => {
+const Login = ({navigation}) => {
 
     const [username, setUsername] = useState("")
     const [password, setPassword] = useState("")
+   
+    
 
     return (
         <View style={LoginStyles.mainView}>
@@ -19,7 +21,7 @@ import {StackNavigator} from 'react-navigation';
                     style={LoginStyles.logo}
                     source={require('../assets/images/logo.png')}
                 />
-                <Text style={LoginStyles.titleView}>Login</Text>
+                
             </View>
 
             {/* Username Password Box */}
@@ -50,12 +52,14 @@ import {StackNavigator} from 'react-navigation';
                 </View>
             </View>
             
-            {/* Sign in Button */}
+            {/* Sign in Button <Pressable onPress={(e) => console.log("Sign in Clicked!")}>
+            */}
             <View style={LoginStyles.signInButtonWrapper}>
-                <Pressable onPress={(e) => console.log("Sign in Clicked!")}>
-                    <Text style={LoginStyles.signInText}>Sign In</Text>
-                </Pressable>
+            <Pressable onPress={() => navigation.navigate("Home")}>
+                <Text style={LoginStyles.signInText}>Sign In</Text>
+            </Pressable>
             </View>
+            
 
             {/* Don't have an account */}
             <View style={LoginStyles.registerHereWrapper}>
@@ -63,6 +67,8 @@ import {StackNavigator} from 'react-navigation';
                 <TouchableOpacity onPress={() => navigation.navigate("Signup")}>
                     <Text style={LoginStyles.registerHere}>Register Here!</Text>
                 </TouchableOpacity>
+                
+                
             </View>
         </View>
     );

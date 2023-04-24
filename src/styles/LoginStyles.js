@@ -2,8 +2,8 @@ import { StyleSheet } from "react-native";
 
 const LoginStyles = StyleSheet.create( {
     logo: {
-        width: 200,
-        height: 200,
+        width: 300,
+        height: 300,
         resizeMode: 'contain'
     },
     loginDisplay: {
