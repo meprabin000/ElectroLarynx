@@ -14,11 +14,14 @@ import TextToSpeech from './TextToSpeech';
 import Home from './Home';
 import Mic from './Mic';
 import AppStyles from '../styles/AppStyles';
+import TtoS from './TtoS';
+//import TtoS_Test2 from './TtoS_Test2';
+import ToS_Test3 from './ToS_Test3';
 
 const App = () => {
   return (
     <View style={AppStyles.appView}>
-      <Mic />
+      <TextToSpeech />
     </View>
   );
 }
