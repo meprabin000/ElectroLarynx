@@ -1,8 +1,13 @@
 import { useState } from "react";
 import { Image, Pressable, Text, TextInput, TouchableOpacity, View } from "react-native";
 import LoginStyles from "../styles/LoginStyles";
+import * as React from 'react';
+import { useNavigation } from '@react-navigation/native';
+import {StackNavigator} from 'react-navigation';
 
-const Login = (props) => {
+
+ const Login = ({navigation}) => {
+
     const [username, setUsername] = useState("")
     const [password, setPassword] = useState("")
 
@@ -55,7 +60,7 @@ const Login = (props) => {
             {/* Don't have an account */}
             <View style={LoginStyles.registerHereWrapper}>
                 <Text style={LoginStyles.noAccountText}>Don't have an account?</Text>
-                <TouchableOpacity onPress={(e) => console.log("Register Here pressed!")}>
+                <TouchableOpacity onPress={() => navigation.navigate("Signup")}>
                     <Text style={LoginStyles.registerHere}>Register Here!</Text>
                 </TouchableOpacity>
             </View>

@@ -13,12 +13,33 @@ import Login from './Login';
 import TextToSpeech from './TextToSpeech';
 import Home from './Home';
 import AppStyles from '../styles/AppStyles';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+
+
+const Stack = createNativeStackNavigator();
 
 const App = () => {
   return (
-    <View style={AppStyles.appView}>
-      <Login />
-    </View>
+    <NavigationContainer>
+    <Stack.Navigator>
+
+      <Stack.Screen
+        name="Login"
+        component={Login}
+        options={{title:"Login"}}
+        //options={{headerShown:false}}
+
+      />
+      <Stack.Screen
+        name="Signup"
+        component={Signup}
+        options={{title:"Register"}}
+       // options={{headerShown:false}}
+
+      />
+    </Stack.Navigator>
+  </NavigationContainer>
   );
 }
 

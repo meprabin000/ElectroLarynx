@@ -1,6 +1,6 @@
 import { useState, useEffect, setState } from "react";
 import { Image, Pressable, Text, TextInput, TouchableOpacity, View } from "react-native";
-import {Slider} from '@miblanchard/react-native-slider';
+
 import HomeStyles from "../styles/HomeStyles";
 
 const Login = (props) => {
@@ -69,22 +69,13 @@ const Login = (props) => {
                         <Pressable onPress={(e) => console.log("voice slider!")}>
                         </Pressable>
                         
-                        <View style={HomeStyles.container}>
-                                <Slider
-                                    value={this.state.value}
-                                    onValueChange={value => this.setState({value})}
-                                />
-                        </View>
+                      
                     </View>
                     <Text style={HomeStyles.text4}>Pitch: {this.state.value}</Text>
                         <View style={HomeStyles.innerSliders}>
                         <Pressable onPress={(e) => console.log("pitch slider!")}>
                         <View style={HomeStyles.container}>
                             
-                                <Slider
-                                    value={this.state.value}
-                                    onValueChange={value => this.setState({value})}
-                                />
                         </View>
                         </Pressable>
                         </View>
