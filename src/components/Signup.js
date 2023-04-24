@@ -1,12 +1,9 @@
 import { useState } from "react";
-import { Image, Pressable, Text, TextInput, TouchableOpacity, View } from "react-native";
+import { Button, Image, Pressable, Text, TextInput, TouchableOpacity, View } from "react-native";
 import { HStack, VStack } from "react-native-flex-layout";
 import SignupStyles from "../styles/SignupStyles.js";
-import * as React from 'react';
-import { useNavigation } from '@react-navigation/native';
-import {StackNavigator} from 'react-navigation';
 
-const Signup = (props) => {
+const Signup = ({ navigation }) => {
     const [firstName, setFirstName] = useState("");
     const [lastName, setLastName] = useState("");
     const [email, setEmail] = useState("")
@@ -24,7 +21,7 @@ const Signup = (props) => {
                     style={SignupStyles.logo}
                     source={require('../assets/images/logo.png')}
                 />
-                <Text style={SignupStyles.titleView}>Sign Up</Text>
+                <Text style={SignupStyles.titleView}>Welcome!</Text>
             </View>
 
             {/* Username Password Box */}
