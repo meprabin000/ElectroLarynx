@@ -1,7 +1,7 @@
 apply plugin: "com.android.application"
 
-//import com.android.build.OutputFile
-//import org.apache.tools.ant.taskdefs.condition.Os
+import com.android.build.OutputFile
+import org.apache.tools.ant.taskdefs.condition.Os
 
 /**
  * The react.gradle file registers a task for each build variant (e.g. bundleDebugJsAndAssets
@@ -141,6 +141,7 @@ android {
         versionCode 1
         versionName "1.0"
         buildConfigField "boolean", "IS_NEW_ARCHITECTURE_ENABLED", isNewArchitectureEnabled().toString()
+        multiDexEnabled true
 
         if (isNewArchitectureEnabled()) {
             // We configure the CMake build only if you decide to opt-in for the New Architecture.
@@ -200,6 +201,11 @@ android {
                 }
             }
         }
+    }
+
+    packagingOptions {
+        exclude 'META-INF/INDEX.LIST'
+        exclude 'META-INF/DEPENDENCIES'
     }
 
     splits {

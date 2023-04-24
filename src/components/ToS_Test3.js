@@ -1,16 +1,27 @@
-import { useState, useEffect  } from "react";
-import { Image, Pressable, Text, TextInput, TouchableOpacity, View, SafeAreaView, StyleSheet } from "react-native";
-import TextToSpeechStyles from "../styles/TextToSpeechStyles";
-import Tts from 'react-native-tts';
+// import React in our code
+import React, {useState, useEffect} from 'react';
+//import TextToSpeech from './TextToSpeech';
+// import all the components we are going to use
+import {
+  SafeAreaView,
+  StyleSheet,
+  Text,
+  View,
+  FlatList,
+  TextInput,
+  Keyboard,
+  TouchableOpacity,
+  Pressable,
+} from 'react-native';
+
+// import slider for the tuning of pitch and speed
 import Slider from '@react-native-community/slider';
-import ToS_Test3 from './ToS_Test3';
 
-const TextToSpeech = (props) => {
-    const [username, setUsername] = useState("")
-    const [password, setPassword] = useState("")
-    //const [text, onChangeText] = useState("");
+// import Tts Text to Speech
+import Tts from 'react-native-tts';
 
-    const [voices, setVoices] = useState([]);
+const App = () => {
+  const [voices, setVoices] = useState([]);
   const [ttsStatus, setTtsStatus] = useState('initiliazing');
   const [selectedVoice, setSelectedVoice] = useState(null);
   const [speechRate, setSpeechRate] = useState(0.5);
@@ -18,7 +29,7 @@ const TextToSpeech = (props) => {
   const [
     text,
     setText
-  ] = useState("What would you like to say?\nEnter your text here.");
+  ] = useState('Enter Text like Hello About React');
 
   useEffect(() => {
     const t_start = Tts.addEventListener(
@@ -95,56 +106,85 @@ const TextToSpeech = (props) => {
     await Tts.setDefaultVoice(voice.id);
     setSelectedVoice(voice.id);
   };
+
+  const renderVoiceItem = ({item}) => {
     return (
-        <View style={TextToSpeechStyles.mainView}>
-            {/* Logo image */}
-            <View style={TextToSpeechStyles.loginDisplay}>
-                <Image
-                    style={TextToSpeechStyles.logo}
-                    source={require('../Assets/images/logo.png')}
-                />
-                <Text style={TextToSpeechStyles.titleView}>Text to Speech Converter</Text>
-                
-                
-            </View>
-
-            <View style={TextToSpeechStyles.inputDisplay}>
-              <View style={TextToSpeechStyles.inputWrapper}>
-                <TextInput
-                  style={TextToSpeechStyles.input}
-                  editable
-                  multiline={true}
-                  numberOfLines = {40}
-                  maxLength = {1000}
-                  placeholder={"What would you like to say?\nEnter your text here."}
-                  onChangeText={(text) => setText(text)}
-                  
-                />
-                </View>  
-                <Text style={TextToSpeechStyles.characterView}>
-                  {text.length}/1000
-                </Text>
-                
-            </View>
-
-          
-            
-            {/* Sign in Button */}
-            <View style={TextToSpeechStyles.signInButtonWrapper}>
-                <Pressable onPress={() => {readText(); console.log(text.length);}}>
-                  <Text style={TextToSpeechStyles.signInText}>Play</Text>
-                  
-                </Pressable>
-            </View> 
-
-           
-
-
-
-
-        </View>
+      <TouchableOpacity
+        style={{
+          backgroundColor: selectedVoice === item.id ? 
+          '#DDA0DD' : '#5F9EA0',
+        }}
+        onPress={() => onVoicePress(item)}>
+        <Text style={styles.buttonTextStyle}>
+          {`${item.language} - ${item.name || item.id}`}
+        </Text>
+      </TouchableOpacity>
     );
-}
+  };
 
+  return (
+    <View style={styles.container}>
+      <View style={styles.container}>
+        
+        <TextInput
+          style={styles.textInput}
+          onChangeText={(text) => setText(text)}
+          value={text}
+          onSubmitEditing={Keyboard.dismiss}
+        />
+        <View>
+        <TouchableOpacity style={styles.buttonStyle} onPress={readText}>
+          <Text>Play</Text>
+        </TouchableOpacity>
+        </View>
+      </View>
+    </View>
+  );
+};
 
-export default TextToSpeech;
+export default App;
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    flexDirection: 'column',
+    padding: 5,
+  },
+  titleText: {
+    fontSize: 22,
+    textAlign: 'center',
+    fontWeight: 'bold',
+  },
+  buttonStyle: {
+    justifyContent: 'center',
+    marginTop: 15,
+    padding: 10,
+    backgroundColor: '#8ad24e',
+  },
+  buttonTextStyle: {
+    color: '#fff',
+    textAlign: 'center',
+  },
+  sliderContainer: {
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+    width: 300,
+    padding: 5,
+  },
+  sliderLabel: {
+    textAlign: 'center',
+    marginRight: 20,
+  },
+  slider: {
+    flex: 1,
+  },
+  textInput: {
+    borderColor: 'gray',
+    borderWidth: 1,
+    color: 'black',
+    width: '100%',
+    textAlign: 'center',
+    height: 40,
+  },
+});
