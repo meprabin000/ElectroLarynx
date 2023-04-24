@@ -3,7 +3,7 @@ import { Image, Pressable, Text, TextInput, TouchableOpacity, View } from "react
 import { HStack, VStack } from "react-native-flex-layout";
 import SignupStyles from "../styles/SignupStyles.js";
 
-const Signup = (props) => {
+const Signup = ({ navigation }) => {
     const [firstName, setFirstName] = useState("");
     const [lastName, setLastName] = useState("");
     const [email, setEmail] = useState("")
@@ -96,7 +96,7 @@ const Signup = (props) => {
             {/* Don't have an account */}
             <View style={SignupStyles.registerHereWrapper}>
                 <Text style={SignupStyles.noAccountText}>Already have an account?</Text>
-                <TouchableOpacity onPress={(e) => console.log("Register Here pressed!")}>
+                <TouchableOpacity onPress={(e) => navigation.navigate('Login')}>
                     <Text style={SignupStyles.registerHere}>Login Here!</Text>
                 </TouchableOpacity>
             </View>

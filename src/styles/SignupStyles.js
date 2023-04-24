@@ -15,6 +15,8 @@ const SignupStyles = StyleSheet.create( {
     mainView: {
         height: '100%',
         width: '100%',
+        marginTop: 70,
+        fontFamily: 'Helvetica'
     },
     titleView: {
         fontSize: 40,
