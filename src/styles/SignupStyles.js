@@ -15,7 +15,7 @@ const SignupStyles = StyleSheet.create( {
     mainView: {
         height: '100%',
         width: '100%',
-        marginTop: 70,
+        marginTop: 40,
         fontFamily: 'Helvetica'
     },
     titleView: {
@@ -59,7 +59,7 @@ const SignupStyles = StyleSheet.create( {
         marginLeft: 50,
         marginRight: 50,
         padding: 5,
-        marginTop: 80
+        marginTop: 60
     },
     signInText: {
         color: 'white',
@@ -71,7 +71,7 @@ const SignupStyles = StyleSheet.create( {
         color: '#888888'
     },
     registerHereWrapper: {
-        marginTop: 70
+        marginTop: 40
     },
     registerHere: {
         textAlign: 'center',
