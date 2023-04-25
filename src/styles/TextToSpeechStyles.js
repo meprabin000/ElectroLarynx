@@ -15,6 +15,7 @@ const TextToSpeechStyles = StyleSheet.create( {
     mainView: {
         height: '100%',
         width: '100%',
+        backgroundColor: 'white',
     },
     titleView: {
         fontSize: 25,
@@ -40,7 +41,7 @@ const TextToSpeechStyles = StyleSheet.create( {
         justifyContent: "center",
         alignSelf: "center",
         height: 520,
-        marginTop: -180,
+        marginTop: -150,
         backgroundColor: '#F1F3F6',
         
     },

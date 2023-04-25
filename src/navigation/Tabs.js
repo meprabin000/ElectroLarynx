@@ -10,7 +10,7 @@ function Tabs() {
   return (
     <Tab.Navigator>
       <Tab.Screen name="Home" component={Home} />
-      <Tab.Screen name="Login" component={Login} />
+      <Tab.Screen name="Text To Speech" component={TextToSpeech} />
     </Tab.Navigator>
   );
 }
