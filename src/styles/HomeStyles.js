@@ -75,6 +75,14 @@ const HomeStyles = StyleSheet.create( {
        justifyContent: "center",
        marginTop: 20,
     },
+    headerDisplay2: {
+        flexDirection: 'row',
+        alignContent: 'center',
+        margin: 10,
+        marginRight: -30,
+       justifyContent: "center",
+       marginTop: -5,
+    },
     sliderWrapper: {
         borderRadius: 10,
         height: 190,

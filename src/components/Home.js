@@ -3,6 +3,7 @@ import { Image, Pressable, Text, TextInput, TouchableOpacity, View } from "react
 
 import HomeStyles from "../styles/HomeStyles";
 import SettingStyles from "../styles/SettingStyles";
+import { Divider } from "react-native-flex-layout";
 
 
 const Login = (props) => {
@@ -91,25 +92,49 @@ const Login = (props) => {
                         <Pressable onPress={(e) => console.log("Slider Clicked!")}>
                         </Pressable>
                     </View>
+
+                   
  
             <Text style={SettingStyles.subDefaultText}>Select the voice you would like to output from your Electrolarynx device.</Text>
                         {/* Custom Voice Button */}
+                        <View style={HomeStyles.headerDisplay2}>
+                                    <Image
+                            source={require('../assets/images/sound.png')}
+                            resizeMode='contain'
+                            style={{
+                                alignSelf: 'flex-start',
+                                width:25,
+                                height:55,
+                                alignItems: 'flex-start',
+                        }}
+                            />
                             <View style={SettingStyles.voiceButtonWrapper}>
                             <TouchableOpacity onPress={(e) => console.log("Disconnect Pressed")}>
                             <Text style={SettingStyles.voiceButtonText}>Custom Voice</Text>
                                 </TouchableOpacity>   
                             </View>
-                           
-                            
-
+                            </View>
+                         
+                            <View style={HomeStyles.headerDisplay2}>
+                                    <Image
+                            source={require('../assets/images/sound.png')}
+                            resizeMode='contain'
+                            style={{
+                                alignSelf: 'flex-start',
+                                width:25,
+                                height:55,
+                                alignItems: 'flex-start',
+                        }}
+                            />
                         {/* Default Voice Button */}
                         <View style={SettingStyles.defaultButtonWrapper}>
                             <TouchableOpacity onPress={(e) => console.log("Disconnect Pressed")}>
                             <Text style={SettingStyles.voiceButtonText}>Default Voice</Text>
+                            
                                 </TouchableOpacity>   
                             </View>
-
-                          
+                            </View>
+                            
                        
             {/* voice selection */}
                 <View style={SettingStyles.ButtonWrapper}>

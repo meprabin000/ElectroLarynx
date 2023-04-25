@@ -143,7 +143,8 @@ const SettingStyles = StyleSheet.create( {
   },
 
   dividerDesign: {
-    margin: 5,
+    margin: 7,
+    color: 'black',
   },
 })
 
