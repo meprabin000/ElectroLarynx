@@ -15,21 +15,39 @@ import Home from './Home';
 import AppStyles from '../styles/AppStyles';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import Tabs from '/Users/noor/Desktop/ElectroLarynx/src/navigation/Tabs.js';
+
+
 
 
 const Stack = createNativeStackNavigator();
 
+
 const App = () => {
   return (
     <NavigationContainer>
-    <Stack.Navigator>
+      <Tabs
 
+
+      
+      
+      />
+
+    
+  </NavigationContainer>
+  );
+}
+
+export default App;
+
+
+/*
+<Stack.Navigator>
       <Stack.Screen
         name="Login"
         component={Login}
         options={{title:"Login"}}
         //options={{headerShown:false}}
-
       />
       <Stack.Screen
         name="Signup"
@@ -50,8 +68,4 @@ const App = () => {
        // options={{headerShown:false}}
       />
     </Stack.Navigator>
-  </NavigationContainer>
-  );
-}
-
-export default App;
+*/
