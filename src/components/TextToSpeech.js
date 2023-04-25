@@ -45,7 +45,16 @@ const TextToSpeech = (props) => {
             {/* Sign in Button */}
             <View style={TextToSpeechStyles.signInButtonWrapper}>
                 <Pressable onPress={(e) => console.log(text.length)}>
-                  <Text style={TextToSpeechStyles.signInText}>Play</Text>
+                <Image
+                source={require('../assets/images/play.png')}
+                resizeMode='contain'
+                style={{
+                    alignSelf: 'center',
+                    width:25,
+                    height:55,
+                    alignItems: 'center',
+              }}
+                />
                   
                 </Pressable>
             </View> 

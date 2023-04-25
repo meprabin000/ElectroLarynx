@@ -41,9 +41,20 @@ const Login = (props) => {
               {/* Play Button */}
               <View style={HomeStyles.playButtonWrapper}>
                 <Pressable onPress={(e) => console.log("PLAY Clicked!")}>
-                    <Text style={HomeStyles.buttonText}>PLAY</Text>
+                <Image
+                source={require('../assets/images/play.png')}
+                resizeMode='contain'
+                style={{
+                    alignSelf: 'center',
+                    width:25,
+                    height:55,
+                    alignItems: 'center',
+              }}
+                />
                 </Pressable>
+                
             </View>
+            
               {/* BLE Button */}
               <View style={HomeStyles.bleButtonWrapper}>
                 <Pressable onPress={(e) => console.log("BLE Clicked!")}>
