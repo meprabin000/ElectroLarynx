@@ -58,7 +58,16 @@ const Login = (props) => {
               {/* BLE Button */}
               <View style={HomeStyles.bleButtonWrapper}>
                 <Pressable onPress={(e) => console.log("BLE Clicked!")}>
-                    <Text style={HomeStyles.buttonText}>BLE</Text>
+                <Image
+                source={require('../assets/images/ble.png')}
+                resizeMode='contain'
+                style={{
+                    alignSelf: 'center',
+                    width:40,
+                    height:100,
+                    alignItems: 'center',
+              }}
+                />
                 </Pressable>
             </View>
             </View>
