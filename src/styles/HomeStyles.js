@@ -76,7 +76,6 @@ const HomeStyles = StyleSheet.create( {
        marginTop: 20,
     },
     sliderWrapper: {
-        backgroundColor: '#FFD9D7',
         borderRadius: 10,
         height: 190,
         width: '90%', 

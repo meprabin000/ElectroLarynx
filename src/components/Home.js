@@ -2,6 +2,7 @@ import { useState, useEffect, setState } from "react";
 import { Image, Pressable, Text, TextInput, TouchableOpacity, View } from "react-native";
 
 import HomeStyles from "../styles/HomeStyles";
+import SettingStyles from "../styles/SettingStyles";
 
 const Login = (props) => {
     const [username, setUsername] = useState("")
@@ -80,34 +81,56 @@ const Login = (props) => {
                         </TouchableOpacity>
                 </View>
             </View>
-                    {/* Slider Wrapper */}
-                    <View style={HomeStyles.sliderWrapper}>
+                    {/* Slider Wrapper 
+                    <Text style={HomeStyles.text4}>Volume: {this.state.value}</Text>
+                    */}
+                    
+                    <View style={HomeStyles.innerSliders}>
                         <Pressable onPress={(e) => console.log("Slider Clicked!")}>
                         </Pressable>
-                        <Text style={HomeStyles.text4}>Volume: {this.state.value}</Text>
-                        <View style={HomeStyles.innerSliders}>
-                        <Pressable onPress={(e) => console.log("voice slider!")}>
-                        </Pressable>
-                        
-                      
-                    </View>
-                    <Text style={HomeStyles.text4}>Pitch: {this.state.value}</Text>
-                        <View style={HomeStyles.innerSliders}>
-                        <Pressable onPress={(e) => console.log("pitch slider!")}>
-                        <View style={HomeStyles.container}>
-                            
-                        </View>
-                        </Pressable>
-                        </View>
                     </View>
 
-                    <View style={HomeStyles.subtitleWrapperVC}>
-                <View style={HomeStyles.redCircle}></View>
-                <View style={HomeStyles.forgotPasswordButtonWrapper}>
-                        <TouchableOpacity>
-                            <Text style={HomeStyles.text3}>Vocal Indicator</Text>
-                        </TouchableOpacity>
-                </View>
+                  
+            <Text style={SettingStyles.subText}>Voice Selection</Text>  
+                        {/* Custom Voice Button */}
+                            <View style={SettingStyles.voiceButtonWrapper}>
+                            <TouchableOpacity onPress={(e) => console.log("Disconnect Pressed")}>
+                            <Text style={SettingStyles.voiceButtonText}>Custom Voice</Text>
+                                </TouchableOpacity>   
+                            </View>
+                           
+                            
+
+                        {/* Default Voice Button */}
+                        <View style={SettingStyles.defaultButtonWrapper}>
+                            <TouchableOpacity onPress={(e) => console.log("Disconnect Pressed")}>
+                            <Text style={SettingStyles.voiceButtonText}>Default Voice</Text>
+                                </TouchableOpacity>   
+                            </View>
+
+                        <Text style={SettingStyles.subDefaultText}>Select the voice you would like to output from your Electrolarynx device.</Text>  
+                       
+            {/* voice selection */}
+                <View style={SettingStyles.ButtonWrapper}>
+            <TouchableOpacity onPress={(e) => console.log("Disconnect Pressed")}>
+            <Text style={SettingStyles.otherButtonText}>Disconnect</Text>
+                </TouchableOpacity>   
+            </View>
+            
+            {/* Report Button 
+            <View style={SettingStyles.ButtonWrapper}>
+            <TouchableOpacity onPress={(e) => console.log("Report Pressed")}>
+            <Text style={SettingStyles.otherButtonText}>Report a Problem</Text>
+                </TouchableOpacity>   
+            </View>
+            
+            */}
+            
+            {/* Logout Button */}
+            <View style={SettingStyles}>
+            <TouchableOpacity onPress={(e) => console.log("Logout Pressed")}>
+            <Text style={SettingStyles.logoutButton}>Log out</Text>
+                </TouchableOpacity>   
             </View>
             
                   
