@@ -86,11 +86,13 @@ const HomeStyles = StyleSheet.create( {
         backgroundColor: '#FFF1F1',
         borderRadius: 10,
         height: 50,
-        width: '80%', 
+        width: '85%', 
         margin: 10,
     },
     batteryButtonWrapper: {
-      backgroundColor: '#34C759',
+      backgroundColor: '#FAFAFF',
+      borderColor: '#34C759',
+      borderWidth: 7,
       padding: 5,
       margin: 17,
       width: 85,
@@ -100,6 +102,7 @@ const HomeStyles = StyleSheet.create( {
       justifyContent: "center",
       alignSelf: "flex-start",
   },
+  
       playButtonWrapper: {
         backgroundColor: '#EF233C',
         padding: 5,
@@ -124,6 +127,11 @@ const HomeStyles = StyleSheet.create( {
     },
     buttonText: {
         color: 'white',
+        textAlign: 'center',
+        fontSize: 25
+    },
+    buttonText2: {
+        color: 'black',
         textAlign: 'center',
         fontSize: 25
     },
@@ -165,6 +173,7 @@ const HomeStyles = StyleSheet.create( {
     text3: {
         marginTop: -4,
         fontSize: 17,
+        
     },
     container: {
         width: '90%',
@@ -175,6 +184,7 @@ const HomeStyles = StyleSheet.create( {
     },
     text4: {
         marginRight: 250,
+       
         
     },
    

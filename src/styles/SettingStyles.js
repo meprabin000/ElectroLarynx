@@ -121,19 +121,20 @@ const SettingStyles = StyleSheet.create( {
     subText: {
         color: '#878787',
         padding:5,
-        marginLeft:-200,
+        marginLeft:-220,
         fontSize: 13,
+        textAlign: 'left',
   },
   subDefaultText: {
     color: '#878787',
-    padding:17,
+    padding:10,
     fontSize: 13,
-    textAlign: 'center',
+    textAlign: 'left',
     
 },
 
   logoutButton: {
-    //color: '#696969',
+    color: '#696969',
     textAlign: 'center',
     fontSize: 15,
     padding: 20,

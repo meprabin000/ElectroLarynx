@@ -4,6 +4,7 @@ import { Image, Pressable, Text, TextInput, TouchableOpacity, View } from "react
 import HomeStyles from "../styles/HomeStyles";
 import SettingStyles from "../styles/SettingStyles";
 
+
 const Login = (props) => {
     const [username, setUsername] = useState("")
     const [password, setPassword] = useState("")
@@ -36,9 +37,10 @@ const Login = (props) => {
                 {/* Battery Button */}
             <View style={HomeStyles.batteryButtonWrapper}>
                 <Pressable onPress={(e) => console.log("Battery Clicked!")}>
-                    <Text style={HomeStyles.buttonText}>%</Text>
+                    <Text style={HomeStyles.buttonText2}>%</Text>
                 </Pressable>
             </View>
+            
               {/* Play Button */}
               <View style={HomeStyles.playButtonWrapper}>
                 <Pressable onPress={(e) => console.log("PLAY Clicked!")}>
@@ -89,9 +91,8 @@ const Login = (props) => {
                         <Pressable onPress={(e) => console.log("Slider Clicked!")}>
                         </Pressable>
                     </View>
-
-                  
-            <Text style={SettingStyles.subText}>Voice Selection</Text>  
+ 
+            <Text style={SettingStyles.subDefaultText}>Select the voice you would like to output from your Electrolarynx device.</Text>
                         {/* Custom Voice Button */}
                             <View style={SettingStyles.voiceButtonWrapper}>
                             <TouchableOpacity onPress={(e) => console.log("Disconnect Pressed")}>
@@ -108,7 +109,7 @@ const Login = (props) => {
                                 </TouchableOpacity>   
                             </View>
 
-                        <Text style={SettingStyles.subDefaultText}>Select the voice you would like to output from your Electrolarynx device.</Text>  
+                          
                        
             {/* voice selection */}
                 <View style={SettingStyles.ButtonWrapper}>
