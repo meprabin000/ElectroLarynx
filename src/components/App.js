@@ -28,7 +28,7 @@ const App = () => {
    // </NavigationContainer>
     // <Auth0Provider domain={"dev-ejp81yk157h52u8t.us.auth0.com"} clientId={"BdBMWwTTB3MqF1MiPuoAgdkzrpDVd4QM"}>
        <View style={AppStyles.appView}>
-         <Signup />
+         <Login />
        </View>
     // </Auth0Provider>
   );
