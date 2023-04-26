@@ -3,6 +3,7 @@ import { Image, Pressable, Text, TextInput, TouchableOpacity, View } from "react
 import {Slider} from '@miblanchard/react-native-slider';
 import HomeStyles from "../styles/HomeStyles";
 
+
 const Login = (props) => {
     const [username, setUsername] = useState("")
     const [password, setPassword] = useState("")
@@ -14,90 +15,35 @@ const Login = (props) => {
         let date = (today.getMonth()+1)+ '/'+today.getDate()+ '/'+ today.getFullYear();
         setDate(date);
       }, []);
-
+      state = {
+        value: 0.2,
+    };
     return (
+        
         <View style={HomeStyles.mainView}>
             
             {/* Logo image */}
             <View style={HomeStyles.loginDisplay}>
-            <View style={HomeStyles.headerDisplay}>
-                <Image
-                    style={HomeStyles.logo}
-                    source={require('../assets/images/logo.png')}
-                />
-                <Text style={HomeStyles.titleView}>Hello,{"\n"}@username!</Text>
-                </View>
-                <Text style={HomeStyles.dateText}>{date}</Text>
           
-
-                {/* Flex Arrangement of Buttons */}
-            <View style={HomeStyles.genButton}>
-                {/* Battery Button */}
-            <View style={HomeStyles.batteryButtonWrapper}>
-                <Pressable onPress={(e) => console.log("Battery Clicked!")}>
-                    <Text style={HomeStyles.buttonText}>%</Text>
-                </Pressable>
-            </View>
-              {/* Play Button */}
-              <View style={HomeStyles.playButtonWrapper}>
-                <Pressable onPress={(e) => console.log("PLAY Clicked!")}>
-                    <Text style={HomeStyles.buttonText}>PLAY</Text>
-                </Pressable>
-            </View>
-              {/* BLE Button */}
-              <View style={HomeStyles.bleButtonWrapper}>
-                <Pressable onPress={(e) => console.log("BLE Clicked!")}>
-                    <Text style={HomeStyles.buttonText}>BLE</Text>
-                </Pressable>
-            </View>
-            </View>
-            
-            <View style={HomeStyles.subtitleWrapperEL}>
-                <View style={HomeStyles.redCircle}></View>
-                <View style={HomeStyles.forgotPasswordButtonWrapper}>
-                        <TouchableOpacity>
-                            <Text style={HomeStyles.text3}>Electrolarynx Settings</Text>
-                        </TouchableOpacity>
-                </View>
-            </View>
                     {/* Slider Wrapper */}
-                    <View style={HomeStyles.sliderWrapper}>
-                        <Pressable onPress={(e) => console.log("Slider Clicked!")}>
-                        </Pressable>
+                   
                         <Text style={HomeStyles.text4}>Volume: {this.state.value}</Text>
                         <View style={HomeStyles.innerSliders}>
+                  
+
                         <Pressable onPress={(e) => console.log("voice slider!")}>
                         </Pressable>
                         
                         <View style={HomeStyles.container}>
-                                <Slider
-                                    value={this.state.value}
-                                    onValueChange={value => this.setState({value})}
-                                />
+                        <Slider
+                    value={this.state.value}
+                    onValueChange={value => this.setState ({value})}
+                />
                         </View>
                     </View>
-                    <Text style={HomeStyles.text4}>Pitch: {this.state.value}</Text>
-                        <View style={HomeStyles.innerSliders}>
-                        <Pressable onPress={(e) => console.log("pitch slider!")}>
-                        <View style={HomeStyles.container}>
-                            
-                                <Slider
-                                    value={this.state.value}
-                                    onValueChange={value => this.setState({value})}
-                                />
-                        </View>
-                        </Pressable>
-                        </View>
-                    </View>
+                  
+                   
 
-                    <View style={HomeStyles.subtitleWrapperVC}>
-                <View style={HomeStyles.redCircle}></View>
-                <View style={HomeStyles.forgotPasswordButtonWrapper}>
-                        <TouchableOpacity>
-                            <Text style={HomeStyles.text3}>Vocal Indicator</Text>
-                        </TouchableOpacity>
-                </View>
-            </View>
             
                   
 
