@@ -13,6 +13,8 @@ const HomeStyles = StyleSheet.create( {
         height: '40%',
         alignItems: 'center',
         position: 'relative',
+        padding:10,
+        marginTop:220,
         
     },
     mainView: {
@@ -87,7 +89,15 @@ const HomeStyles = StyleSheet.create( {
         borderRadius: 10,
         height: 50,
         width: '80%', 
-        margin: 10,
+        justifyContent: "center",
+        padding:50,
+    },
+    container: {
+        backgroundColor: '#FFF1F1',
+        height: 100,
+        marginTop:300,
+        width: '100%', 
+        
     },
     batteryButtonWrapper: {
       backgroundColor: '#34C759',
@@ -174,8 +184,9 @@ const HomeStyles = StyleSheet.create( {
         justifyContent: 'center',    
     },
     text4: {
-        marginRight: 250,
-        
+        color: 'red',
+        fontSize:30,   
+        textAlign:"center" 
     },
    
 })

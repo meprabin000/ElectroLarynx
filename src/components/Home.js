@@ -1,56 +1,38 @@
 import { useState, useEffect, setState } from "react";
 import { Image, Pressable, Text, TextInput, TouchableOpacity, View } from "react-native";
-import {Slider} from '@miblanchard/react-native-slider';
 import HomeStyles from "../styles/HomeStyles";
-
+import { StatusBar } from 'react-native';
+import {Slider} from '@miblanchard/react-native-slider';
 
 const Login = (props) => {
-    const [username, setUsername] = useState("")
-    const [password, setPassword] = useState("")
-    const [date, setDate] = useState(null);
-    state = { value: 5, };
-
-    useEffect(() => {
-        let today = new Date();
-        let date = (today.getMonth()+1)+ '/'+today.getDate()+ '/'+ today.getFullYear();
-        setDate(date);
-      }, []);
-      state = {
-        value: 0.2,
-    };
+    const [range, setRange]=useState('50%');
+    //const [sliding, setSliding]=useState('Inactive');
+ 
     return (
-        
-        <View style={HomeStyles.mainView}>
-            
-            {/* Logo image */}
-            <View style={HomeStyles.loginDisplay}>
-          
+    <View style={HomeStyles.mainView}>
+        <View style={HomeStyles.loginDisplay}>
                     {/* Slider Wrapper */}
+                    <Text style={{fontSize:20, fontWeight: 'bold'}}>{'Volume: '+ range}</Text>
                    
-                        <Text style={HomeStyles.text4}>Volume: {this.state.value}</Text>
-                        <View style={HomeStyles.innerSliders}>
-                  
-
-                        <Pressable onPress={(e) => console.log("voice slider!")}>
-                        </Pressable>
-                        
-                        <View style={HomeStyles.container}>
+                 <View style={HomeStyles.innerSliders}>
                         <Slider
-                    value={this.state.value}
-                    onValueChange={value => this.setState ({value})}
-                />
-                        </View>
-                    </View>
-                  
-                   
-
-            
-                  
-
-
-            
+                            style={{width:250, height:40}}
+                            minimumValue={0}
+                            maximumValue={1}
+                            minimumTrackTintColor="#414141"
+                            maximumTrackTintColor="#D9D9D9"
+                            thumbTintColor="#414141"
+                            step={.0001}
+                            value={0.5}
+                            onValueChange = {value => setRange(parseInt(value * 100) + '%')}
+                           // onSlidingStart = {() => setSliding('Sliding')}
+                           // onSlidingComplete={() => setSliding('Inactive')}
+                            
+                           
+                        />
+                    <StatusBar style="auto"/>
         </View>
-        
+        </View>
     </View>
     );
 }
