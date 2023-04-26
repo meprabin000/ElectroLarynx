@@ -21,6 +21,7 @@ const Login = (props) => {
     return (
         <View style={HomeStyles.mainView}>
             
+            
             {/* Logo image */}
             <View style={HomeStyles.loginDisplay}>
             <View style={HomeStyles.headerDisplay}>
@@ -96,6 +97,7 @@ const Login = (props) => {
                    
  
             <Text style={SettingStyles.subDefaultText}>Select the voice you would like to output from your Electrolarynx device.</Text>
+            
                         {/* Custom Voice Button */}
                         <View style={HomeStyles.headerDisplay2}>
                                     <Image
@@ -114,7 +116,7 @@ const Login = (props) => {
                                 </TouchableOpacity>   
                             </View>
                             </View>
-                         
+                            <Divider style= {SettingStyles.dividerDesign}></Divider>
                             <View style={HomeStyles.headerDisplay2}>
                                     <Image
                             source={require('../assets/images/sound.png')}
@@ -134,15 +136,15 @@ const Login = (props) => {
                                 </TouchableOpacity>   
                             </View>
                             </View>
-                            
                        
             {/* voice selection */}
                 <View style={SettingStyles.ButtonWrapper}>
             <TouchableOpacity onPress={(e) => console.log("Disconnect Pressed")}>
             <Text style={SettingStyles.otherButtonText}>Disconnect</Text>
-                </TouchableOpacity>   
+                </TouchableOpacity>  
+                 
             </View>
-            
+            <Divider style= {SettingStyles.dividerDesign}></Divider>
             {/* Report Button 
             <View style={SettingStyles.ButtonWrapper}>
             <TouchableOpacity onPress={(e) => console.log("Report Pressed")}>
@@ -159,13 +161,16 @@ const Login = (props) => {
                 </TouchableOpacity>   
             </View>
             
+            
                   
 
 
             
         </View>
         
+        
     </View>
+    
     );
 }
 
