@@ -72,6 +72,7 @@ const LoginStyles = StyleSheet.create( {
         textAlign: 'center',
         paddingTop: 5,
         fontSize: 15,
+        color:'red',
         textDecorationLine: 'underline',
         fontWeight: '400'
     }
