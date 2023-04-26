@@ -83,20 +83,27 @@ const HomeStyles = StyleSheet.create( {
        justifyContent: "center",
        marginTop: -5,
     },
+    otherWrapper: {
+     width:'100%',
+    justifyContent: "center",
+    alignSelf: "flex-start",
+    marginTop: -5,
+
+    },
     sliderWrapper: {
+        marginTop: 10,
         backgroundColor: '#FFF1F1',
+        flexDirection: 'row',
         borderRadius: 10,
         height: 50,
-        width: '90%', 
-        alignItems: 'center',
+        margin:20,
         justifyContent: "center",
-        margin:10,
     },
     innerSliders: {
         borderRadius: 10,
         height: 50,
         width: '80%', 
-        margin: 10,
+        marginLeft:10,
         justifyContent: "center",
     },
     batteryButtonWrapper: {

@@ -88,8 +88,21 @@ const Login = (props) => {
                 </View>
             </View>
                     {/* Slider Wrapper */}
+                    <View style={HomeStyles.otherWrapper}>
                     <View style={HomeStyles.sliderWrapper}>
+                    <Image
+                            source={require('../assets/images/audio.png')}
+                            resizeMode='contain'
+                        
+                            style={{
+                                padding: 5,
+                                width:35,
+                                height:55, 
+                                alignContent: 'center',
+                        }}
+                            />
                            <View style={HomeStyles.innerSliders}>
+                           
                             <Slider
                                 style={{width:250, height:40}}
                                 minimumValue={0}
@@ -105,7 +118,7 @@ const Login = (props) => {
                         </View>
 
             </View>
- 
+        </View>
             <Text style={SettingStyles.subDefaultText}>Select the voice you would like to output from your Electrolarynx device.</Text>
             
                         {/* Custom Voice Button */}
