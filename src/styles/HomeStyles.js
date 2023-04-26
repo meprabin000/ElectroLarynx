@@ -84,18 +84,20 @@ const HomeStyles = StyleSheet.create( {
        marginTop: -5,
     },
     sliderWrapper: {
-        borderRadius: 10,
-        height: 190,
-        width: '90%', 
-        alignItems: 'center',
-        justifyContent: "center",
-    },
-    innerSliders: {
         backgroundColor: '#FFF1F1',
         borderRadius: 10,
         height: 50,
-        width: '85%', 
+        width: '90%', 
+        alignItems: 'center',
+        justifyContent: "center",
+        margin:10,
+    },
+    innerSliders: {
+        borderRadius: 10,
+        height: 50,
+        width: '80%', 
         margin: 10,
+        justifyContent: "center",
     },
     batteryButtonWrapper: {
       backgroundColor: '#FAFAFF',
@@ -165,12 +167,13 @@ const HomeStyles = StyleSheet.create( {
       height: 10,
       borderRadius: 10/2,
       backgroundColor: 'red',
-      marginRight: 10,
+      
     },
     subtitleWrapperEL: {
        flexDirection: 'row',   
        margin: 10,
-       marginLeft: -150,  
+       marginLeft: -300,
+        
     },
     subtitleWrapperVC: {
         flexDirection: 'row',   
@@ -181,6 +184,8 @@ const HomeStyles = StyleSheet.create( {
     text3: {
         marginTop: -4,
         fontSize: 17,
+        marginRight:-400,
+        
         
     },
     container: {

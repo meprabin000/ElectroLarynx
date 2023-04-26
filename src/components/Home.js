@@ -4,13 +4,15 @@ import { Image, Pressable, Text, TextInput, TouchableOpacity, View } from "react
 import HomeStyles from "../styles/HomeStyles";
 import SettingStyles from "../styles/SettingStyles";
 import { Divider } from "react-native-flex-layout";
+import { StatusBar } from 'react-native';
+import {Slider} from '@miblanchard/react-native-slider';
 
 
 const Login = (props) => {
     const [username, setUsername] = useState("")
     const [password, setPassword] = useState("")
     const [date, setDate] = useState(null);
-    state = { value: 5, };
+    const [range, setRange]=useState('50%');
 
     useEffect(() => {
         let today = new Date();
@@ -81,20 +83,28 @@ const Login = (props) => {
                 <View style={HomeStyles.redCircle}></View>
                 <View style={HomeStyles.forgotPasswordButtonWrapper}>
                         <TouchableOpacity>
-                            <Text style={HomeStyles.text3}>Electrolarynx Settings</Text>
+                            <Text style={HomeStyles.text3}>   Electrolarynx Volume: {range}</Text>
                         </TouchableOpacity>
                 </View>
             </View>
-                    {/* Slider Wrapper 
-                    <Text style={HomeStyles.text4}>Volume: {this.state.value}</Text>
-                    */}
-                    
-                    <View style={HomeStyles.innerSliders}>
-                        <Pressable onPress={(e) => console.log("Slider Clicked!")}>
-                        </Pressable>
-                    </View>
+                    {/* Slider Wrapper */}
+                    <View style={HomeStyles.sliderWrapper}>
+                           <View style={HomeStyles.innerSliders}>
+                            <Slider
+                                style={{width:250, height:40}}
+                                minimumValue={0}
+                                maximumValue={1}
+                                minimumTrackTintColor="#414141"
+                                maximumTrackTintColor="#D9D9D9"
+                                thumbTintColor="#414141"
+                                step={.0001}
+                                value={0.5}
+                                onValueChange = {value => setRange(parseInt(value * 100) + '%')}  
+                            />
+                            <StatusBar style="auto"/>
+                        </View>
 
-                   
+            </View>
  
             <Text style={SettingStyles.subDefaultText}>Select the voice you would like to output from your Electrolarynx device.</Text>
             
@@ -111,7 +121,7 @@ const Login = (props) => {
                         }}
                             />
                             <View style={SettingStyles.voiceButtonWrapper}>
-                            <TouchableOpacity onPress={(e) => console.log("Disconnect Pressed")}>
+                            <TouchableOpacity onPress={(e) => console.log("Custom Voice Pressed")}>
                             <Text style={SettingStyles.voiceButtonText}>Custom Voice</Text>
                                 </TouchableOpacity>   
                             </View>
@@ -130,7 +140,7 @@ const Login = (props) => {
                             />
                         {/* Default Voice Button */}
                         <View style={SettingStyles.defaultButtonWrapper}>
-                            <TouchableOpacity onPress={(e) => console.log("Disconnect Pressed")}>
+                            <TouchableOpacity onPress={(e) => console.log("Default Voice Pressed")}>
                             <Text style={SettingStyles.voiceButtonText}>Default Voice</Text>
                             
                                 </TouchableOpacity>   
