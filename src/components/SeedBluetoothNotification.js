@@ -7,7 +7,7 @@ const HEART_RATE_SERVICE_UUID =  '180f' ;
 // const HEART_RATE_MEASUREMENT_CHAR_UUID = '5AF3B44B-8C42-4F9F-A5B1-84E8E4B655EE';
 const HEART_RATE_MEASUREMENT_CHAR_UUID = '5af3b44b-8c42-4f9f-a5b1-84e8e4b655ee';
 
-const BATTERY_MEASUREMENT_CHAR_UUID = '2A19' ;
+const BATTERY_MEASUREMENT_CHAR_UUID = '2a19' ;
 
 const BleManagerModule = NativeModules.BleManager;
 const bleManagerEmitter = new NativeEventEmitter(BleManagerModule);
@@ -30,8 +30,13 @@ const SeedBluetoothNotification = ({ deviceId }) => {
       })
       .then(() => {
         console.log('Heart rate notifications started');
-        bleManagerEmitter.addListener('BleManagerDidUpdateValueForCharacteristic', handleCharacteristicUpdate.current);
+        return BleManager.startNotification(deviceId, HEART_RATE_SERVICE_UUID, BATTERY_MEASUREMENT_CHAR_UUID);
       })
+      .then(() => {
+        console.log('Heart rate notifications started');
+        return bleManagerEmitter.addListener('BleManagerDidUpdateValueForCharacteristic', handleCharacteristicUpdate.current);
+      })
+      
       .catch((error) => {
         console.log(`Error connecting to device with ID ${deviceId}`, error);
         setIsConnected(false);
@@ -50,27 +55,36 @@ const SeedBluetoothNotification = ({ deviceId }) => {
     if (characteristic === HEART_RATE_MEASUREMENT_CHAR_UUID) {
       // const heartRateMeasurement = value.getUint8(1);
       const text = String.fromCharCode(...value)
-      console.log('Heart rate:', text);
+      console.log('Message:', text);
       setPulse(text)
       Tts.stop();
       Tts.speak(text);
       // Emit an event to notify the component that the heart rate has changed
       // bleManagerEmitter.emit('heartRateChanged', heartRateMeasurement);
     }
+    else if (characteristic === BATTERY_MEASUREMENT_CHAR_UUID) {
+      const newBattery = String.fromCharCode(...value)
+      console.log('Battery:', newBattery);
+      const parsedBattery = parseInt(newBattery);
+      if (!isNaN(parsedBattery)) {
+        setBattery(parsedBattery);
+      }
+      
+    }
   });
 
-  const onPress = () => {
-    BleManager.read(deviceId, HEART_RATE_SERVICE_UUID, HEART_RATE_MEASUREMENT_CHAR_UUID)
-    .then((data) => {
-      console.log(`Read data: ${data}`);
-      setPulse(data)
-      Tts.stop();
-      Tts.speak(String.fromCharCode(...data));
-    })
-    .catch((error) => {
-      console.log(`Read error: ${error}`);
-    });
-  };
+  // const onPress = () => {
+  //   BleManager.read(deviceId, HEART_RATE_SERVICE_UUID, HEART_RATE_MEASUREMENT_CHAR_UUID)
+  //   .then((data) => {
+  //     console.log(`Read data: ${data}`);
+  //     setPulse(data)
+  //     Tts.stop();
+  //     Tts.speak(String.fromCharCode(...data));
+  //   })
+  //   .catch((error) => {
+  //     console.log(`Read error: ${error}`);
+  //   });
+  // };
 
   const getBattery = () => {
     BleManager.read(deviceId, HEART_RATE_SERVICE_UUID, BATTERY_MEASUREMENT_CHAR_UUID)
@@ -89,15 +103,14 @@ const SeedBluetoothNotification = ({ deviceId }) => {
 
   return ( 
     <View>
-      <TouchableOpacity onPress={() => {onPress();}}>
+      {/* <TouchableOpacity onPress={() => {onPress();}}>
         <Text>Press me!</Text>
-      </TouchableOpacity>
+      </TouchableOpacity> */}
       <TouchableOpacity onPress={() => {getBattery();}}>
         <Text>Get battery!</Text>
       </TouchableOpacity>
-      <Text>pooop</Text>
-      <Text>Heart rate: {pulse !== null ? `${pulse} bpm` : 'No speech data'}</Text>
-      <Text>Battery: {battery !== null ? `${battery} bpm` : 'No battery data'}</Text>
+      <Text>Spoken Text: {pulse !== null ? `${pulse}` : 'No speech data'}</Text>
+      <Text>Battery: {battery !== null ? `${battery}%` : 'No battery data'}</Text>
     </View>
   );
 };

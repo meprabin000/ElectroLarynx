@@ -28,7 +28,7 @@ import SeedBluetoothNotification from './SeedBluetoothNotification';
 
 const App = () => {
   //const deviceId = 'bb738232-9cd0-604a-b41c-7dece095c079'
-  //const deviceId = '1597F0BB-4BCD-C6CF-A39B-9774847816B2'
+  // const deviceId = '1597F0BB-4BCD-C6CF-A39B-9774847816B2'
   const deviceId = '1597f0bb-4bcd-c6cf-a39b-9774847816b2'
   //const deviceId = '5AF3B44B-8C42-4F9F-A5B1-84E8E4B655EE'
   return (
