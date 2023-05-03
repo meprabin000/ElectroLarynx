@@ -1,10 +1,20 @@
 import { useState } from "react";
 import { Image, Pressable, Text, TextInput, TouchableOpacity, View } from "react-native";
 import LoginStyles from "../styles/LoginStyles";
+import { loginUser } from "../../firebase";
 
 const Login = ({ navigation }) => {
     const [username, setUsername] = useState("")
     const [password, setPassword] = useState("")
+
+    const handleLogin = async () => {
+        const user = await loginUser(username, password);
+        if (user) {
+            console.log('Login successful');
+        } else {
+            alert('Login failed');
+        }
+    };
 
     return (
         <View style={LoginStyles.mainView}>
@@ -47,7 +57,7 @@ const Login = ({ navigation }) => {
             
             {/* Sign in Button */}
             <View style={LoginStyles.signInButtonWrapper}>
-                <Pressable onPress={(e) => console.log("Sign in Clicked!")}>
+                <Pressable onPress={handleLogin}>
                     <Text style={LoginStyles.signInText}>Sign In</Text>
                 </Pressable>
             </View>

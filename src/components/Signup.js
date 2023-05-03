@@ -1,7 +1,8 @@
 import { useState } from "react";
-import { Image, Pressable, Text, TextInput, TouchableOpacity, View } from "react-native";
+import { Image, KeyboardAvoidingView, Pressable, Text, TextInput, TouchableOpacity, View } from "react-native";
 import { HStack, VStack } from "react-native-flex-layout";
 import SignupStyles from "../styles/SignupStyles.js";
+import { addUserAuth, writeUserData } from "../../firebase.js";
 
 const Signup = ({ navigation }) => {
     const [firstName, setFirstName] = useState("");
@@ -10,8 +11,13 @@ const Signup = ({ navigation }) => {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
     const [reenteredPassword, setReenteredPassword] = useState("");
-    
 
+    const handleSignup = async () => {
+        const signedUp = await addUserAuth(firstName, lastName, email, username, password);
+        if (signedUp) {
+            navigation.navigate('Login');
+        }
+    };
 
     return (
         <VStack spacing={5} style={SignupStyles.mainView}>
@@ -25,7 +31,7 @@ const Signup = ({ navigation }) => {
             </View>
 
             {/* Username Password Box */}
-            <View style={SignupStyles.inputDisplay}>
+            <KeyboardAvoidingView style={SignupStyles.inputDisplay}>
                 <HStack style={SignupStyles.firstLastNameStack} spacing={10}>
                     <View style={[SignupStyles.inputWrapper, SignupStyles.firstLastNameWrapper]}>
                         <TextInput
@@ -84,11 +90,11 @@ const Signup = ({ navigation }) => {
                         placeholder="Reenter Password"
                     />
                 </View>
-            </View>
+            </KeyboardAvoidingView>
             
             {/* Sign in Button */}
             <View style={SignupStyles.signInButtonWrapper}>
-                <Pressable onPress={(e) => console.log("Create Account Clicked!")}>
+                <Pressable onPress={handleSignup}>
                     <Text style={SignupStyles.signInText}>Create Account</Text>
                 </Pressable>
             </View>
