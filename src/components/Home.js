@@ -7,8 +7,8 @@ import { Divider } from "react-native-flex-layout";
 import { StatusBar } from 'react-native';
 import {Slider} from '@miblanchard/react-native-slider';
 
-import {test} from './BluetoothScreenDraft';
-import BluetoothScreen from './BluetoothScreen';
+// import {test} from './BluetoothScreenDraft';
+// import BluetoothScreen from './BluetoothScreen';
 
 const Login = (props) => {
     const [username, setUsername] = useState("")
@@ -67,7 +67,7 @@ const Login = (props) => {
             
               {/* BLE Button */}
               <View style={HomeStyles.bleButtonWrapper}>
-                <Pressable onPress={test}>
+                <Pressable >
                 <Image
                 source={require('../Assets/images/ble.png')}
                 resizeMode='contain'
