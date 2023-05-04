@@ -1,9 +1,23 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { View, Text, TouchableOpacity, NativeEventEmitter, NativeModules } from 'react-native';
-import BleManager from 'react-native-ble-manager';
+// import BleManager from 'react-native-ble-manager';
 import Tts from 'react-native-tts';
+import {test} from './BluetoothScreenDraft';
 
 const HEART_RATE_SERVICE_UUID =  '180f' ;
+const SERVICE_UUIDS = ['180F'];
+const SECONDS_TO_SCAN_FOR = 7;
+const ALLOW_DUPLICATES = true;
+
+import BleManager, {
+  BleDisconnectPeripheralEvent,
+  BleManagerDidUpdateValueForCharacteristicEvent,
+  BleScanCallbackType,
+  //BleScanMatchMode,
+  BleScanMode,
+  Peripheral,
+} from 'react-native-ble-manager';
+
 // const HEART_RATE_MEASUREMENT_CHAR_UUID = '5AF3B44B-8C42-4F9F-A5B1-84E8E4B655EE';
 const HEART_RATE_MEASUREMENT_CHAR_UUID = '5af3b44b-8c42-4f9f-a5b1-84e8e4b655ee';
 
@@ -18,6 +32,22 @@ const SeedBluetoothNotification = ({ deviceId }) => {
   const [isConnected, setIsConnected] = useState(false);
 
   useEffect(() => {
+
+    try {
+      BleManager.start({showAlert: false})
+        .then(() => console.debug('BleManager started.'))
+        .catch(error =>
+          console.error('BeManager could not be started.', error),
+        );
+    } catch (error) {
+      console.error('unexpected error starting BleManager.', error);
+      return;
+    };
+    BleManager.scan([], 5, true).then(() => {
+      // Success code
+      console.log("Scan started");
+    });
+
     BleManager.connect(deviceId)
       .then(() => {
         console.log(`Connected to device with ID ${deviceId}`);
@@ -55,22 +85,25 @@ const SeedBluetoothNotification = ({ deviceId }) => {
     if (characteristic === HEART_RATE_MEASUREMENT_CHAR_UUID) {
       // const heartRateMeasurement = value.getUint8(1);
       const text = String.fromCharCode(...value)
-      console.log('Message:', text);
+      // console.log('Message:', text);
       setPulse(text)
       Tts.stop();
       Tts.speak(text);
+      getBattery();
       // Emit an event to notify the component that the heart rate has changed
       // bleManagerEmitter.emit('heartRateChanged', heartRateMeasurement);
     }
-    else if (characteristic === BATTERY_MEASUREMENT_CHAR_UUID) {
-      const newBattery = String.fromCharCode(...value)
-      console.log('Battery:', newBattery);
-      const parsedBattery = parseInt(newBattery);
-      if (!isNaN(parsedBattery)) {
-        setBattery(parsedBattery);
-      }
+    // else if (characteristic === BATTERY_MEASUREMENT_CHAR_UUID) {
+    //   const newBattery = String.fromCharCode(...value)
+    //   console.log('Battery:', newBattery);
+    //   // const parsedBattery = parseInt(newBattery);
+    //   // setBattery(parsedBattery);
+    //   // // if (!isNaN(parsedBattery)) {
+
+    //   // //   setBattery(parsedBattery);
+    //   // // }
       
-    }
+    // }
   });
 
   // const onPress = () => {
@@ -87,6 +120,7 @@ const SeedBluetoothNotification = ({ deviceId }) => {
   // };
 
   const getBattery = () => {
+    console.log("wtfff")
     BleManager.read(deviceId, HEART_RATE_SERVICE_UUID, BATTERY_MEASUREMENT_CHAR_UUID)
       .then((data) => {
         console.log(`Read data: ${data}`);
@@ -105,6 +139,9 @@ const SeedBluetoothNotification = ({ deviceId }) => {
     <View>
       {/* <TouchableOpacity onPress={() => {onPress();}}>
         <Text>Press me!</Text>
+      </TouchableOpacity> */}
+      {/* <TouchableOpacity onPress={test}>
+        <Text>start bluetooth</Text>
       </TouchableOpacity> */}
       <TouchableOpacity onPress={() => {getBattery();}}>
         <Text>Get battery!</Text>
