@@ -12,12 +12,13 @@ import Signup from './Signup';
 import Login from './Login';
 import TextToSpeech from './TextToSpeech'
 import AppStyles from '../styles/AppStyles';
-import ForgotPassword from './ForgotPassword';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import HomeDraft from './HomeDraft';
 
 const Stack = createNativeStackNavigator();
+import Tabs from '/Users/noor/Desktop/ElectroLarynx/src/navigation/Tabs.js';
+
 
 const App = () => {
   return (
@@ -33,3 +34,32 @@ const App = () => {
 
 export default App;
 
+
+/*
+<Stack.Navigator>
+      <Stack.Screen
+        name="Login"
+        component={Login}
+        options={{title:"Login"}}
+        //options={{headerShown:false}}
+      />
+      <Stack.Screen
+        name="Signup"
+        component={Signup}
+        options={{title:"Register"}}
+       // options={{headerShown:false}}
+      />
+      <Stack.Screen
+        name="Home"
+        component={Home}
+        options={{title:"Home"}}
+       // options={{headerShown:false}}
+      />
+      <Stack.Screen
+        name="TextToSpeech"
+        component={TextToSpeech}
+        options={{title:"TextToSpeech"}}
+       // options={{headerShown:false}}
+      />
+    </Stack.Navigator>
+*/
