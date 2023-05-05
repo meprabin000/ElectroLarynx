@@ -51,6 +51,7 @@ import Login from './Login';
 import TextToSpeech from './TextToSpeech';
 import Home from './Home';
 import AppStyles from '../styles/AppStyles';
+import ForgotPassword from './ForgotPassword';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Tabs from '../navigation/Tabs.js';
@@ -77,3 +78,4 @@ const App = () => {
 }
 
 export default App;
+
