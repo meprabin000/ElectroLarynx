@@ -35,6 +35,8 @@ const bleManagerEmitter = new NativeEventEmitter(BleManagerModule);
 
 const deviceId = '1597f0bb-4bcd-c6cf-a39b-9774847816b2'
 
+const customVoice = 'com.apple.ttsbundle.Daniel-compact'
+
 
 const Login = (props) => {
     const [username, setUsername] = useState("")
@@ -46,6 +48,20 @@ const Login = (props) => {
     const [battery, setBattery] = useState('');
     const [isConnected, setIsConnected] = useState(false);
     const [bluetoothPressed, setBluetoothPressed] = useState(true);
+    const [isDefaultVoice, setIsDefaultVoice] = useState(true);
+
+
+    useEffect(() => {
+        console.log("isDefaultVoice = ", isDefaultVoice)
+            Tts.setDefaultLanguage('en-US');
+            if (isDefaultVoice) {
+                Tts.setDefaultVoice('');
+            } else {
+                Tts.setDefaultVoice(customVoice);
+
+            }
+        
+      }, [isDefaultVoice]);
 
     const handleCharacteristicUpdate = useRef((data) => {
         const { value, characteristic } = data;
@@ -55,11 +71,7 @@ const Login = (props) => {
 
           Tts.stop();
           console.diableYellowBox = true;
-         
-            Tts.setDefaultLanguage('en-US')
-            Tts.setDuckingEnabled(true);
-
-            Tts.setDefaultVoice('com.apple.ttsbundle.Thomas-compact');
+        
             
 
           
@@ -133,7 +145,13 @@ const Login = (props) => {
       }, [bluetoothPressed, bleManagerEmitter, deviceId]);
     
       
-    
+    const handleCustomVoice = () => {
+        setIsDefaultVoice(false)
+    }
+
+    const handleDefaultVoice = () => {
+        setIsDefaultVoice(true)
+    }
 
 
     useEffect(() => {
@@ -311,7 +329,7 @@ const Login = (props) => {
                         }}
                             />
                             <View style={SettingStyles.voiceButtonWrapper}>
-                            <TouchableOpacity onPress={(e) => console.log("Custom Voice Pressed")}>
+                            <TouchableOpacity onPress={handleCustomVoice}>
                             <Text style={SettingStyles.voiceButtonText}>Custom Voice</Text>
                                 </TouchableOpacity>   
                             </View>
@@ -330,7 +348,7 @@ const Login = (props) => {
                             />
                         {/* Default Voice Button */}
                         <View style={SettingStyles.defaultButtonWrapper}>
-                            <TouchableOpacity onPress={(e) => console.log("Default Voice Pressed")}>
+                            <TouchableOpacity onPress={handleDefaultVoice}>
                             <Text style={SettingStyles.voiceButtonText}>Default Voice</Text>
                             
                                 </TouchableOpacity>   
