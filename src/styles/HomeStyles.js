@@ -75,23 +75,41 @@ const HomeStyles = StyleSheet.create( {
        justifyContent: "center",
        marginTop: 20,
     },
+    headerDisplay2: {
+        flexDirection: 'row',
+        alignContent: 'center',
+        margin: 10,
+        marginRight: -30,
+       justifyContent: "center",
+       marginTop: -5,
+    },
+    otherWrapper: {
+     width:'100%',
+    justifyContent: "center",
+    alignSelf: "flex-start",
+    marginTop: -5,
+
+    },
     sliderWrapper: {
-        backgroundColor: '#FFD9D7',
+        marginTop: 10,
+        backgroundColor: '#FFF1F1',
+        flexDirection: 'row',
         borderRadius: 10,
-        height: 190,
-        width: '90%', 
-        alignItems: 'center',
+        height: 50,
+        margin:20,
         justifyContent: "center",
     },
     innerSliders: {
-        backgroundColor: '#FFF1F1',
         borderRadius: 10,
         height: 50,
         width: '80%', 
-        margin: 10,
+        marginLeft:10,
+        justifyContent: "center",
     },
     batteryButtonWrapper: {
-      backgroundColor: '#34C759',
+      backgroundColor: '#FAFAFF',
+      borderColor: '#34C759',
+      borderWidth: 7,
       padding: 5,
       margin: 17,
       width: 85,
@@ -101,6 +119,7 @@ const HomeStyles = StyleSheet.create( {
       justifyContent: "center",
       alignSelf: "flex-start",
   },
+  
       playButtonWrapper: {
         backgroundColor: '#EF233C',
         padding: 5,
@@ -128,6 +147,11 @@ const HomeStyles = StyleSheet.create( {
         textAlign: 'center',
         fontSize: 25
     },
+    buttonText2: {
+        color: 'black',
+        textAlign: 'center',
+        fontSize: 25
+    },
     noAccountText: {
         textAlign: 'center',
         color: '#888888'
@@ -150,12 +174,13 @@ const HomeStyles = StyleSheet.create( {
       height: 10,
       borderRadius: 10/2,
       backgroundColor: 'red',
-      marginRight: 10,
+      
     },
     subtitleWrapperEL: {
        flexDirection: 'row',   
        margin: 10,
-       marginLeft: -150,  
+       marginLeft: -300,
+        
     },
     subtitleWrapperVC: {
         flexDirection: 'row',   
@@ -166,6 +191,9 @@ const HomeStyles = StyleSheet.create( {
     text3: {
         marginTop: -4,
         fontSize: 17,
+        marginRight:-400,
+        
+        
     },
     container: {
         width: '90%',
@@ -176,6 +204,7 @@ const HomeStyles = StyleSheet.create( {
     },
     text4: {
         marginRight: 250,
+       
         
     },
    
