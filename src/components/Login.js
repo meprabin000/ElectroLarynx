@@ -21,7 +21,7 @@ const Login = ({ navigation }) => {
             <View style={LoginStyles.loginDisplay}>
                 <Image
                     style={LoginStyles.logo}
-                    source={require('../assets/images/logo.png')}
+                    source={require('../Assets/images/logo.png')}
                 />
                 
             </View>
