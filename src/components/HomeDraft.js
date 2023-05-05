@@ -38,7 +38,7 @@ const deviceId = '1597f0bb-4bcd-c6cf-a39b-9774847816b2'
 const customVoice = 'com.apple.ttsbundle.Daniel-compact'
 
 
-const Login = (props) => {
+const HomeDraft = (props) => {
     const [username, setUsername] = useState("")
     const [password, setPassword] = useState("")
     const [date, setDate] = useState(null);
@@ -224,7 +224,7 @@ const Login = (props) => {
             <View style={HomeStyles.headerDisplay}>
                 <Image
                     style={HomeStyles.logo}s
-                    source={require('../Assets/images/logo.png')}
+                    source={require('../assets/images/logo.png')}
                 />
                 <Text style={HomeStyles.titleView}>Hello,{"\n"}@username!</Text>
                 </View>
@@ -244,7 +244,7 @@ const Login = (props) => {
               <View style={HomeStyles.playButtonWrapper}>
                 <Pressable onPress={(e) => console.log("PLAY Clicked!")}>
                 <Image
-                source={require('../Assets/images/play.png')}
+                source={require('../assets/images/play.png')}
                 resizeMode='contain'
                 style={{
                     alignSelf: 'center',
@@ -261,7 +261,7 @@ const Login = (props) => {
               <View style={[HomeStyles.bleButtonWrapper, {backgroundColor: isConnected ? '#0A84FF' : '#D3D3D3'}]}>
                 <Pressable onPress={handleBluetoothPressed}>
                 <Image
-                source={require('../Assets/images/ble.png')}
+                source={require('../assets/images/ble.png')}
                 resizeMode='contain'
                 style={{
                     alignSelf: 'center',
@@ -286,7 +286,7 @@ const Login = (props) => {
                     <View style={HomeStyles.otherWrapper}>
                     <View style={HomeStyles.sliderWrapper}>
                     <Image
-                            source={require('../Assets/images/audio.png')}
+                            source={require('../assets/images/audio.png')}
                             resizeMode='contain'
                         
                             style={{
@@ -319,7 +319,7 @@ const Login = (props) => {
                         {/* Custom Voice Button */}
                         <View style={HomeStyles.headerDisplay2}>
                                     <Image
-                            source={require('../Assets/images/sound.png')}
+                            source={require('../assets/images/sound.png')}
                             resizeMode='contain'
                             style={{
                                 alignSelf: 'flex-start',
@@ -337,7 +337,7 @@ const Login = (props) => {
                             <Divider style= {SettingStyles.dividerDesign}></Divider>
                             <View style={HomeStyles.headerDisplay2}>
                                     <Image
-                            source={require('../Assets/images/sound.png')}
+                            source={require('../assets/images/sound.png')}
                             resizeMode='contain'
                             style={{
                                 alignSelf: 'flex-start',
@@ -392,4 +392,4 @@ const Login = (props) => {
     );
 }
 
-export default Login;
+export default HomeDraft;

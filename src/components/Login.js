@@ -11,7 +11,7 @@ const Login = ({ navigation }) => {
         const user = await loginUser(username, password);
         if (user) {
             // navigate to home page
-            alert('Login successful');
+            navigation.navigate('Home');
         }
     };
 
@@ -21,7 +21,7 @@ const Login = ({ navigation }) => {
             <View style={LoginStyles.loginDisplay}>
                 <Image
                     style={LoginStyles.logo}
-                    source={require('../Assets/images/logo.png')}
+                    source={require('../assets/images/logo.png')}
                 />
                 
             </View>
