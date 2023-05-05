@@ -66,6 +66,7 @@ const HomeStyles = StyleSheet.create( {
     genButton: {
         flexDirection: 'row',
         margin: 3,
+        
     },
     headerDisplay: {
         flexDirection: 'row',

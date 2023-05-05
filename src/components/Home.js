@@ -11,8 +11,13 @@ import {Slider} from '@miblanchard/react-native-slider';
 const Login = (props) => {
     const [username, setUsername] = useState("")
     const [password, setPassword] = useState("")
+
     const [date, setDate] = useState(null);
+
     const [range, setRange]=useState('50%');
+
+    const [active, setActive] = useState(false);
+    const handleClick = () => { setActive(!active); };
 
     useEffect(() => {
         let today = new Date();
@@ -42,7 +47,9 @@ const Login = (props) => {
             <View style={HomeStyles.batteryButtonWrapper}>
                 <Pressable onPress={(e) => console.log("Battery Clicked!")}>
                     <Text style={HomeStyles.buttonText2}>%</Text>
+                    
                 </Pressable>
+                
             </View>
             
               {/* Play Button */}
