@@ -21,14 +21,11 @@ const Stack = createNativeStackNavigator();
 const App = () => {
   return (
     <NavigationContainer>
-     <Stack.Navigator screenOptions={{ headerShown: false }}>
-       <Stack.Screen name="Login" component={Login} />
-       <Stack.Screen name="Signup" component={Signup} />
-       <Stack.Screen name="ForgotPassword" component={ForgotPassword} />
-     </Stack.Navigator>
-   </NavigationContainer>
-    // <Auth0Provider domain={"dev-ejp81yk157h52u8t.us.auth0.com"} clientId={"BdBMWwTTB3MqF1MiPuoAgdkzrpDVd4QM"}>
-    // </Auth0Provider>
+      <Stack.Navigator screenOptions={{ headerShown: false }}>
+        <Stack.Screen name="Login" component={Login} />
+        <Stack.Screen name="Signup" component={Signup} />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
 
