@@ -2,8 +2,8 @@ import { StyleSheet } from "react-native";
 
 const LoginStyles = StyleSheet.create( {
     logo: {
-        width: 300,
-        height: 300,
+        width: 60,
+        height: 70,
         resizeMode: 'contain'
     },
     loginDisplay: {
@@ -17,8 +17,8 @@ const LoginStyles = StyleSheet.create( {
         width: '100%',
     },
     titleView: {
-        fontSize: 40,
-        fontWeight: '500'
+        fontSize: 25,
+        fontWeight: '300'
     },
     inputDisplay: {
         paddingRight: 40,
@@ -28,54 +28,46 @@ const LoginStyles = StyleSheet.create( {
         // backgroundColor: 'blue'
     },
     inputWrapper: {
-        borderWidth: 0.2,
-        borderColor: 'red',
         borderRadius: 10,
-        width: 300,
-        marginTop: 20
+        width: 330,
+        alignContent: "center",
+        justifyContent: "center",
+        alignSelf: "center",
+        height: 530,
+        marginTop: -180,
+        backgroundColor: '#F1F3F6',
+        
     },
     inputBoxDisplay: {
         height: 40,
         padding: 10,
         fontSize: 20
     },
-    forgotPasswordButton: {
-        fontSize: 15,
-        marginTop: -15,
-        marginRight:10,
-        textAlign: 'right',
-        color: '#696969'
-    },
-    forgotPasswordButtonWrapper: {
-        marginTop: 20,
+    input: {
+      height: 40,
+      margin: 12,
+      padding: 10,
+      fontSize: 17,
+      
+      
     },
     signInButtonWrapper: {
         backgroundColor: 'red',
-        borderRadius: 20,
-        marginLeft: 50,
-        marginRight: 50,
-        padding: 5
+        padding: 5,
+        marginTop: 110,
+        width: 80,
+        height: 80,
+        borderRadius: 80/2,
+        alignContent: "center",
+        justifyContent: "center",
+        alignSelf: "center",
     },
     signInText: {
         color: 'white',
         textAlign: 'center',
         fontSize: 25
     },
-    noAccountText: {
-        textAlign: 'center',
-        color: '#888888'
-    },
-    registerHereWrapper: {
-        marginTop: 120
-    },
-    registerHere: {
-        textAlign: 'center',
-        paddingTop: 5,
-        fontSize: 15,
-        color:'red',
-        textDecorationLine: 'underline',
-        fontWeight: '400'
-    }
+   
 })
 
 export default LoginStyles;
