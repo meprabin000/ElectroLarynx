@@ -11,9 +11,9 @@
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		7A029C314654DCBE2DFF3848 /* libPods-ElectroLarynx.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 36C35B6F1B8A024783DF50B2 /* libPods-ElectroLarynx.a */; };
+		32F5D709F7BAF5CC233B3343 /* libPods-ElectroLarynx-ElectroLarynxTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E166AD4C14D2916C5EB7CE6 /* libPods-ElectroLarynx-ElectroLarynxTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
-		EE40E1016EF2D94797A1A2A3 /* libPods-ElectroLarynx-ElectroLarynxTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 574E125FBCE884017D7DC668 /* libPods-ElectroLarynx-ElectroLarynxTests.a */; };
+		D4D36BF8ACB7642276EBE762 /* libPods-ElectroLarynx.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D8AE332982D5DBD5442337B2 /* libPods-ElectroLarynx.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,22 +30,20 @@
 		00E356EE1AD99517003FC87E /* ElectroLarynxTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ElectroLarynxTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* ElectroLarynxTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ElectroLarynxTests.m; sourceTree = "<group>"; };
-		0298429B9E41E634E2F988E5 /* Pods-ElectroLarynx-ElectroLarynxTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ElectroLarynx-ElectroLarynxTests.release.xcconfig"; path = "Target Support Files/Pods-ElectroLarynx-ElectroLarynxTests/Pods-ElectroLarynx-ElectroLarynxTests.release.xcconfig"; sourceTree = "<group>"; };
+		0CEA8A3611327337B201E27B /* Pods-ElectroLarynx.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ElectroLarynx.debug.xcconfig"; path = "Target Support Files/Pods-ElectroLarynx/Pods-ElectroLarynx.debug.xcconfig"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* ElectroLarynx.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ElectroLarynx.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ElectroLarynx/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AppDelegate.mm; path = ElectroLarynx/AppDelegate.mm; sourceTree = "<group>"; };
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = ElectroLarynx/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = ElectroLarynx/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = ElectroLarynx/main.m; sourceTree = "<group>"; };
-		36C35B6F1B8A024783DF50B2 /* libPods-ElectroLarynx.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ElectroLarynx.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		574E125FBCE884017D7DC668 /* libPods-ElectroLarynx-ElectroLarynxTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ElectroLarynx-ElectroLarynxTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5ACAAAF6C9B2D5690E7E5EE1 /* Pods-ElectroLarynx-ElectroLarynxTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ElectroLarynx-ElectroLarynxTests.debug.xcconfig"; path = "Target Support Files/Pods-ElectroLarynx-ElectroLarynxTests/Pods-ElectroLarynx-ElectroLarynxTests.debug.xcconfig"; sourceTree = "<group>"; };
+		5E166AD4C14D2916C5EB7CE6 /* libPods-ElectroLarynx-ElectroLarynxTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ElectroLarynx-ElectroLarynxTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = ElectroLarynx/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		8F79A9FFCB5DA8BC3014A80C /* Pods-ElectroLarynx.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ElectroLarynx.debug.xcconfig"; path = "Target Support Files/Pods-ElectroLarynx/Pods-ElectroLarynx.debug.xcconfig"; sourceTree = "<group>"; };
-		BB62890A52D91EA06A4FBBB8 /* Pods-ElectroLarynxTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ElectroLarynxTests.debug.xcconfig"; path = "Target Support Files/Pods-ElectroLarynxTests/Pods-ElectroLarynxTests.debug.xcconfig"; sourceTree = "<group>"; };
-		CF8F7A4C6A18098B00100BB5 /* Pods-ElectroLarynx-ElectroLarynxTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ElectroLarynx-ElectroLarynxTests.debug.xcconfig"; path = "Target Support Files/Pods-ElectroLarynx-ElectroLarynxTests/Pods-ElectroLarynx-ElectroLarynxTests.debug.xcconfig"; sourceTree = "<group>"; };
-		DE682A08616B42130E5F28DA /* Pods-ElectroLarynx.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ElectroLarynx.release.xcconfig"; path = "Target Support Files/Pods-ElectroLarynx/Pods-ElectroLarynx.release.xcconfig"; sourceTree = "<group>"; };
+		890D4B5568F3A143A0865292 /* Pods-ElectroLarynx.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ElectroLarynx.release.xcconfig"; path = "Target Support Files/Pods-ElectroLarynx/Pods-ElectroLarynx.release.xcconfig"; sourceTree = "<group>"; };
+		B0C714E35550300000B749EB /* Pods-ElectroLarynx-ElectroLarynxTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ElectroLarynx-ElectroLarynxTests.release.xcconfig"; path = "Target Support Files/Pods-ElectroLarynx-ElectroLarynxTests/Pods-ElectroLarynx-ElectroLarynxTests.release.xcconfig"; sourceTree = "<group>"; };
+		D8AE332982D5DBD5442337B2 /* libPods-ElectroLarynx.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ElectroLarynx.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
-		EECAE89CB2DC39D244FBA5E9 /* Pods-ElectroLarynxTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ElectroLarynxTests.release.xcconfig"; path = "Target Support Files/Pods-ElectroLarynxTests/Pods-ElectroLarynxTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,7 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EE40E1016EF2D94797A1A2A3 /* libPods-ElectroLarynx-ElectroLarynxTests.a in Frameworks */,
+				32F5D709F7BAF5CC233B3343 /* libPods-ElectroLarynx-ElectroLarynxTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,7 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7A029C314654DCBE2DFF3848 /* libPods-ElectroLarynx.a in Frameworks */,
+				D4D36BF8ACB7642276EBE762 /* libPods-ElectroLarynx.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,8 +100,8 @@
 			isa = PBXGroup;
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
-				36C35B6F1B8A024783DF50B2 /* libPods-ElectroLarynx.a */,
-				574E125FBCE884017D7DC668 /* libPods-ElectroLarynx-ElectroLarynxTests.a */,
+				D8AE332982D5DBD5442337B2 /* libPods-ElectroLarynx.a */,
+				5E166AD4C14D2916C5EB7CE6 /* libPods-ElectroLarynx-ElectroLarynxTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -111,12 +109,10 @@
 		59C9E87F95AA09B9106F15F1 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				8F79A9FFCB5DA8BC3014A80C /* Pods-ElectroLarynx.debug.xcconfig */,
-				DE682A08616B42130E5F28DA /* Pods-ElectroLarynx.release.xcconfig */,
-				CF8F7A4C6A18098B00100BB5 /* Pods-ElectroLarynx-ElectroLarynxTests.debug.xcconfig */,
-				0298429B9E41E634E2F988E5 /* Pods-ElectroLarynx-ElectroLarynxTests.release.xcconfig */,
-				BB62890A52D91EA06A4FBBB8 /* Pods-ElectroLarynxTests.debug.xcconfig */,
-				EECAE89CB2DC39D244FBA5E9 /* Pods-ElectroLarynxTests.release.xcconfig */,
+				0CEA8A3611327337B201E27B /* Pods-ElectroLarynx.debug.xcconfig */,
+				890D4B5568F3A143A0865292 /* Pods-ElectroLarynx.release.xcconfig */,
+				5ACAAAF6C9B2D5690E7E5EE1 /* Pods-ElectroLarynx-ElectroLarynxTests.debug.xcconfig */,
+				B0C714E35550300000B749EB /* Pods-ElectroLarynx-ElectroLarynxTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -159,12 +155,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "ElectroLarynxTests" */;
 			buildPhases = (
-				878E5C1EB5534D9727226705 /* [CP] Check Pods Manifest.lock */,
+				BD12909CF8710683C7597B9C /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
 				00E356EB1AD99517003FC87E /* Frameworks */,
 				00E356EC1AD99517003FC87E /* Resources */,
-				A77F5DFB9EA4F4CB89ED3C4A /* [CP] Embed Pods Frameworks */,
-				11392F9AD58D90990A6D481F /* [CP] Copy Pods Resources */,
+				41E5672C7E11A0C57F63A242 /* [CP] Embed Pods Frameworks */,
+				DA8471B1A13A394094844029 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -180,14 +176,14 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "ElectroLarynx" */;
 			buildPhases = (
-				C988A4B1A0B5902B80675F1B /* [CP] Check Pods Manifest.lock */,
+				40DF9C33616D2BDF37ADC003 /* [CP] Check Pods Manifest.lock */,
 				FD10A7F022414F080027D42C /* Start Packager */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
-				DA536DDB69BA0F718409E4B3 /* [CP] Embed Pods Frameworks */,
-				2C5C9B8B1188B0A67573B55C /* [CP] Copy Pods Resources */,
+				8B8B8BB36C7A0C19718C982E /* [CP] Embed Pods Frameworks */,
+				C6447B147E5AEFFC66193D33 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -270,80 +266,7 @@
 			shellPath = /bin/sh;
 			shellScript = "set -e\n\nWITH_ENVIRONMENT=\"../node_modules/react-native/scripts/xcode/with-environment.sh\"\nREACT_NATIVE_XCODE=\"../node_modules/react-native/scripts/react-native-xcode.sh\"\n\n/bin/sh -c \"$WITH_ENVIRONMENT $REACT_NATIVE_XCODE\"\n";
 		};
-		11392F9AD58D90990A6D481F /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ElectroLarynx-ElectroLarynxTests/Pods-ElectroLarynx-ElectroLarynxTests-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ElectroLarynx-ElectroLarynxTests/Pods-ElectroLarynx-ElectroLarynxTests-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ElectroLarynx-ElectroLarynxTests/Pods-ElectroLarynx-ElectroLarynxTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		2C5C9B8B1188B0A67573B55C /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ElectroLarynx/Pods-ElectroLarynx-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ElectroLarynx/Pods-ElectroLarynx-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ElectroLarynx/Pods-ElectroLarynx-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		878E5C1EB5534D9727226705 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-ElectroLarynx-ElectroLarynxTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		A77F5DFB9EA4F4CB89ED3C4A /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ElectroLarynx-ElectroLarynxTests/Pods-ElectroLarynx-ElectroLarynxTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ElectroLarynx-ElectroLarynxTests/Pods-ElectroLarynx-ElectroLarynxTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ElectroLarynx-ElectroLarynxTests/Pods-ElectroLarynx-ElectroLarynxTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		C988A4B1A0B5902B80675F1B /* [CP] Check Pods Manifest.lock */ = {
+		40DF9C33616D2BDF37ADC003 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -365,7 +288,24 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		DA536DDB69BA0F718409E4B3 /* [CP] Embed Pods Frameworks */ = {
+		41E5672C7E11A0C57F63A242 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ElectroLarynx-ElectroLarynxTests/Pods-ElectroLarynx-ElectroLarynxTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ElectroLarynx-ElectroLarynxTests/Pods-ElectroLarynx-ElectroLarynxTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ElectroLarynx-ElectroLarynxTests/Pods-ElectroLarynx-ElectroLarynxTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8B8B8BB36C7A0C19718C982E /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -380,6 +320,62 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ElectroLarynx/Pods-ElectroLarynx-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BD12909CF8710683C7597B9C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ElectroLarynx-ElectroLarynxTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C6447B147E5AEFFC66193D33 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ElectroLarynx/Pods-ElectroLarynx-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ElectroLarynx/Pods-ElectroLarynx-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ElectroLarynx/Pods-ElectroLarynx-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DA8471B1A13A394094844029 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ElectroLarynx-ElectroLarynxTests/Pods-ElectroLarynx-ElectroLarynxTests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ElectroLarynx-ElectroLarynxTests/Pods-ElectroLarynx-ElectroLarynxTests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ElectroLarynx-ElectroLarynxTests/Pods-ElectroLarynx-ElectroLarynxTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FD10A7F022414F080027D42C /* Start Packager */ = {
@@ -434,7 +430,7 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CF8F7A4C6A18098B00100BB5 /* Pods-ElectroLarynx-ElectroLarynxTests.debug.xcconfig */;
+			baseConfigurationReference = 5ACAAAF6C9B2D5690E7E5EE1 /* Pods-ElectroLarynx-ElectroLarynxTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -461,7 +457,7 @@
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0298429B9E41E634E2F988E5 /* Pods-ElectroLarynx-ElectroLarynxTests.release.xcconfig */;
+			baseConfigurationReference = B0C714E35550300000B749EB /* Pods-ElectroLarynx-ElectroLarynxTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
@@ -485,7 +481,7 @@
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8F79A9FFCB5DA8BC3014A80C /* Pods-ElectroLarynx.debug.xcconfig */;
+			baseConfigurationReference = 0CEA8A3611327337B201E27B /* Pods-ElectroLarynx.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -511,7 +507,7 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DE682A08616B42130E5F28DA /* Pods-ElectroLarynx.release.xcconfig */;
+			baseConfigurationReference = 890D4B5568F3A143A0865292 /* Pods-ElectroLarynx.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
