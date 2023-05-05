@@ -5,6 +5,7 @@ import Login from '../components/Login';
 import TextToSpeech from '../components/TextToSpeech';
 import Home from '../components/Home';
 import TabStyles from "../styles/TabStyles";
+import HomeDraft from '../components/HomeDraft';
 
 const Tab = createBottomTabNavigator();
 
@@ -20,7 +21,7 @@ function Tabs() {
         },
       }}>
 
-      <Tab.Screen name="Home" component={Home} options={{ tabBarIcon: ({focused})=> (
+      <Tab.Screen name="Home" component={HomeDraft} options={{ tabBarIcon: ({focused})=> (
         <View>
           <Image
             source={require('../Assets/images/home.png')}

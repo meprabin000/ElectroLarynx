@@ -56,13 +56,17 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Tabs from '../navigation/Tabs.js';
 
 import SeedBluetoothNotification from './SeedBluetoothNotification';
+import HomeDraft from './HomeDraft';
 
 const Stack = createNativeStackNavigator();
-const deviceId = '1597F0BB-4BCD-C6CF-A39B-9774847816B2';
+const deviceId = '1597f0bb-4bcd-c6cf-a39b-9774847816b2'
 
 const App = () => {
   return (
-    // <SeedBluetoothNotification deviceId={deviceId}/>
+    // <View>
+    //   <SeedBluetoothNotification deviceId={deviceId}/>
+    // </View>
+    
     <NavigationContainer>
       <Tabs
       />
