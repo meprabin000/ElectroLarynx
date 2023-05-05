@@ -162,7 +162,7 @@ const TextToSpeech = (props) => {
 
 
         </View>
-        </TouchableWithoutFeedback>
+        </TouchableWithoutFeedback> 
         </>
     );
 }
