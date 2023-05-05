@@ -82,7 +82,7 @@ async function loginUser(username, password) {
       return user;
     })
     .catch((error) => {
-      alert(`${error.message}`);
+      alert(`Login failed: ${error.message}`);
       return null;
     });
 }

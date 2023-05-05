@@ -10,9 +10,8 @@ const Login = ({ navigation }) => {
     const handleLogin = async () => {
         const user = await loginUser(username, password);
         if (user) {
-            console.log('Login successful');
-        } else {
-            alert('Login failed');
+            // navigate to home page
+            alert('Login successful');
         }
     };
 
