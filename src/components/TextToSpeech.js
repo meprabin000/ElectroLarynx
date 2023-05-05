@@ -1,8 +1,9 @@
 import { useState, useEffect  } from "react";
-import { Image, Pressable, Text, TextInput, TouchableOpacity, View, SafeAreaView, StyleSheet } from "react-native";
+import { TouchableWithoutFeedback, Keyboard, Image, Pressable, Text, TextInput, TouchableOpacity, View, SafeAreaView, StyleSheet } from "react-native";
 import TextToSpeechStyles from "../styles/TextToSpeechStyles";
 import Tts from 'react-native-tts';
 import Slider from '@react-native-community/slider';
+import { ScrollView } from "react-native-gesture-handler";
 
 
 const TextToSpeech = (props) => {
@@ -60,7 +61,9 @@ const TextToSpeech = (props) => {
         //"Language is not supported"
         console.log(`setDefaultLanguage error `, err);
       }
-      await Tts.setDefaultVoice(voices[2].id);
+      //await Tts.setDefaultVoice(voices[2].id);
+      await Tts.setDefaultVoice('com.apple.ttsbundle.Daniel-compact');
+
       setVoices(availableVoices);
       setSelectedVoice(selectedVoice);
       setTtsStatus('initialized');
@@ -92,10 +95,20 @@ const TextToSpeech = (props) => {
       // "Language is not supported"
       console.log(`setDefaultLanguage error `, err);
     }
-    await Tts.setDefaultVoice(voice.id);
+    //await Tts.setDefaultVoice(voice.id);
+    await Tts.setDefaultVoice('com.apple.ttsbundle.Daniel-compact');
+
     setSelectedVoice(voice.id);
   };
+
+  const handleDismissKeyboard = () => {
+    Keyboard.dismiss();
+  };
     return (
+      <>
+      
+      <TouchableWithoutFeedback onPress={Keyboard.dismiss} 
+                          accessible={false}>
         <View style={TextToSpeechStyles.mainView}>
             {/* Logo image */}
             <View style={TextToSpeechStyles.loginDisplay}>
@@ -110,6 +123,9 @@ const TextToSpeech = (props) => {
 
             <View style={TextToSpeechStyles.inputDisplay}>
               <View style={TextToSpeechStyles.inputWrapper}>
+              <ScrollView contentContainerStyle={{flexGrow: 1}}
+                keyboardShouldPersistTaps='handled'
+              >
                 <TextInput
                   style={TextToSpeechStyles.input}
                   editable
@@ -118,14 +134,17 @@ const TextToSpeech = (props) => {
                   maxLength = {1000}
                   placeholder={"What would you like to say?\nEnter your text here."}
                   onChangeText={(text) => setText(text)}
-                  
+                  onBlur={handleDismissKeyboard}
                 />
+                </ScrollView>
                 </View>  
+                
                 <Text style={TextToSpeechStyles.characterView}>
                   {text.length}/1000
                 </Text>
                 
             </View>
+        
 
           
             
@@ -143,6 +162,8 @@ const TextToSpeech = (props) => {
 
 
         </View>
+        </TouchableWithoutFeedback>
+        </>
     );
 }
 
