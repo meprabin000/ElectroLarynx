@@ -10,8 +10,9 @@ import React from 'react';
 import { FlatList, StyleSheet, View, Text } from 'react-native';
 import Signup from './Signup';
 import Login from './Login';
+import TextToSpeech from './TextToSpeech'
 import AppStyles from '../styles/AppStyles';
-import {useAuth0, Auth0Provider} from 'react-native-auth0';
+import ForgotPassword from './ForgotPassword';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
@@ -29,3 +30,4 @@ const App = () => {
 }
 
 export default App;
+

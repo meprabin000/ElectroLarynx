@@ -2,8 +2,9 @@ import { StyleSheet } from "react-native";
 
 const LoginStyles = StyleSheet.create( {
     logo: {
-        width: 200,
-        height: 200,
+        width: 300,
+        height: 300,
+        marginTop: 50,
         resizeMode: 'contain'
     },
     loginDisplay: {
@@ -43,7 +44,10 @@ const LoginStyles = StyleSheet.create( {
     },
     forgotPasswordButton: {
         fontSize: 15,
-        textAlign: 'center'
+        marginTop: -15,
+        marginRight:10,
+        textAlign: 'right',
+        color: '#696969'
     },
     forgotPasswordButtonWrapper: {
         marginTop: 20,
@@ -71,6 +75,7 @@ const LoginStyles = StyleSheet.create( {
         textAlign: 'center',
         paddingTop: 5,
         fontSize: 15,
+        color:'red',
         textDecorationLine: 'underline',
         fontWeight: '400'
     }
