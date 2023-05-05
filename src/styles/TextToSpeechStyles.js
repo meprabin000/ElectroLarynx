@@ -1,6 +1,6 @@
 import { StyleSheet } from "react-native";
 
-const LoginStyles = StyleSheet.create( {
+const TextToSpeechStyles = StyleSheet.create( {
     logo: {
         width: 60,
         height: 70,
@@ -20,6 +20,12 @@ const LoginStyles = StyleSheet.create( {
         fontSize: 25,
         fontWeight: '300'
     },
+    characterView: {
+      color: '#908484',
+      marginTop: -20,
+      
+      marginLeft: 250,
+  },
     inputDisplay: {
         paddingRight: 40,
         paddingLeft: 40,
@@ -33,7 +39,7 @@ const LoginStyles = StyleSheet.create( {
         alignContent: "center",
         justifyContent: "center",
         alignSelf: "center",
-        height: 530,
+        height: 520,
         marginTop: -180,
         backgroundColor: '#F1F3F6',
         
@@ -44,17 +50,16 @@ const LoginStyles = StyleSheet.create( {
         fontSize: 20
     },
     input: {
-      height: 40,
+      height: 500,
       margin: 12,
       padding: 10,
+      marginTop: 20,
       fontSize: 17,
-      
-      
     },
     signInButtonWrapper: {
         backgroundColor: 'red',
         padding: 5,
-        marginTop: 110,
+        marginTop: 100,
         width: 80,
         height: 80,
         borderRadius: 80/2,
@@ -70,4 +75,4 @@ const LoginStyles = StyleSheet.create( {
    
 })
 
-export default LoginStyles;
+export default TextToSpeechStyles;
