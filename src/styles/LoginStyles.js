@@ -4,6 +4,7 @@ const LoginStyles = StyleSheet.create( {
     logo: {
         width: 300,
         height: 300,
+        marginTop: 50,
         resizeMode: 'contain'
     },
     loginDisplay: {
