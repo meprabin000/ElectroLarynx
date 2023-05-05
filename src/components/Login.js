@@ -1,19 +1,18 @@
 import { useState } from "react";
-import { Image, Pressable, Text, TextInput, TouchableOpacity, View } from "react-native";
+import { Button, Image, Pressable, Text, TextInput, TouchableOpacity, View } from "react-native";
 import LoginStyles from "../styles/LoginStyles";
-import { loginUser } from "../../firebase";
+import * as React from 'react';
+import { useNavigation } from '@react-navigation/native';
+import {StackNavigator} from 'react-navigation';
 
-const Login = ({ navigation }) => {
+
+
+const Login = ({navigation}) => {
+
     const [username, setUsername] = useState("")
     const [password, setPassword] = useState("")
-
-    const handleLogin = async () => {
-        const user = await loginUser(username, password);
-        if (user) {
-            // navigate to home page
-            alert('Login successful');
-        }
-    };
+   
+    
 
     return (
         <View style={LoginStyles.mainView}>
@@ -21,7 +20,7 @@ const Login = ({ navigation }) => {
             <View style={LoginStyles.loginDisplay}>
                 <Image
                     style={LoginStyles.logo}
-                    source={require('../Assets/images/logo.png')}
+                    source={require('../assets/images/logo.png')}
                 />
                 
             </View>
@@ -54,19 +53,23 @@ const Login = ({ navigation }) => {
                 </View>
             </View>
             
-            {/* Sign in Button */}
+            {/* Sign in Button <Pressable onPress={(e) => console.log("Sign in Clicked!")}>
+            */}
             <View style={LoginStyles.signInButtonWrapper}>
-                <Pressable onPress={handleLogin}>
-                    <Text style={LoginStyles.signInText}>Sign In</Text>
-                </Pressable>
+            <Pressable onPress={() => navigation.navigate("Home")}>
+                <Text style={LoginStyles.signInText}>Sign In</Text>
+            </Pressable>
             </View>
+            
 
             {/* Don't have an account */}
             <View style={LoginStyles.registerHereWrapper}>
                 <Text style={LoginStyles.noAccountText}>Don't have an account?</Text>
-                <TouchableOpacity onPress={(e) => navigation.navigate('Signup')}>
+                <TouchableOpacity onPress={() => navigation.navigate("Signup")}>
                     <Text style={LoginStyles.registerHere}>Register Here!</Text>
                 </TouchableOpacity>
+                
+                
             </View>
         </View>
     );

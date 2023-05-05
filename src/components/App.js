@@ -1,48 +1,10 @@
-// /**
-//  * Sample React Native App
-//  * https://github.com/facebook/react-native
-//  *
-//  * @format
-//  * @flow strict-local
-//  */
-
-// import React from 'react';
-// import { FlatList, StyleSheet, View, Text } from 'react-native';
-// import Signup from './Signup';
-// import Login from './Login';
-// import TextToSpeech from './TextToSpeech'
-// import AppStyles from '../styles/AppStyles';
-// import {useAuth0, Auth0Provider} from 'react-native-auth0';
-// import { NavigationContainer } from '@react-navigation/native';
-// //import { createNativeStackNavigator } from '@react-navigation/native-stack';
-
-// //const Stack = createNativeStackNavigator();
-// import TtoS from './TtoS';
-// //import TtoS_Test2 from './TtoS_Test2';
-// import ToS_Test3 from './ToS_Test3';
-
-// // import BluetoothScreen from './BluetoothScreen';
-// import HeartRateMonitor from './HeartRateMonitor';
-// import SeedBluetooth from './SeedBluetooth';
-// import SeedBluetoothNotification from './SeedBluetoothNotification';
-
-// const App = () => {
-//   //const deviceId = 'bb738232-9cd0-604a-b41c-7dece095c079'
-//   // const deviceId = '1597F0BB-4BCD-C6CF-A39B-9774847816B2'
-//   const deviceId = '1597f0bb-4bcd-c6cf-a39b-9774847816b2'
-//   //const deviceId = '5AF3B44B-8C42-4F9F-A5B1-84E8E4B655EE'
-//   return (
-//     <View style={AppStyles.appView}>
-//       {/* <HeartRateMonitor deviceId={deviceId}/> */}
-//       {/* <BluetoothScreen /> */}
-//       {/* <SeedBluetooth deviceId={deviceId}/> */}
-//       <SeedBluetoothNotification deviceId={deviceId}/>
-//       {/* <TextToSpeech /> */}
-//     </View>
-//   );
-// }
-
-// export default App;
+/**
+ * Sample React Native App
+ * https://github.com/facebook/react-native
+ *
+ * @format
+ * @flow strict-local
+ */
 
 import React from 'react';
 import { FlatList, StyleSheet, View, Text } from 'react-native';
@@ -51,31 +13,60 @@ import Login from './Login';
 import TextToSpeech from './TextToSpeech';
 import Home from './Home';
 import AppStyles from '../styles/AppStyles';
-import ForgotPassword from './ForgotPassword';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import Tabs from '../navigation/Tabs.js';
+import Tabs from '/Users/noor/Desktop/ElectroLarynx/src/navigation/Tabs.js';
 
-import SeedBluetoothNotification from './SeedBluetoothNotification';
-import HomeDraft from './HomeDraft';
+
+
 
 const Stack = createNativeStackNavigator();
-const deviceId = '1597f0bb-4bcd-c6cf-a39b-9774847816b2'
+
 
 const App = () => {
   return (
-    // <View>
-    //   <SeedBluetoothNotification deviceId={deviceId}/>
-    // </View>
-    
     <NavigationContainer>
       <Tabs
-      />
+      
+
 
       
-    </NavigationContainer>
+      
+      />
+
+    
+  </NavigationContainer>
   );
 }
 
 export default App;
 
+
+/*
+<Stack.Navigator>
+      <Stack.Screen
+        name="Login"
+        component={Login}
+        options={{title:"Login"}}
+        //options={{headerShown:false}}
+      />
+      <Stack.Screen
+        name="Signup"
+        component={Signup}
+        options={{title:"Register"}}
+       // options={{headerShown:false}}
+      />
+      <Stack.Screen
+        name="Home"
+        component={Home}
+        options={{title:"Home"}}
+       // options={{headerShown:false}}
+      />
+      <Stack.Screen
+        name="TextToSpeech"
+        component={TextToSpeech}
+        options={{title:"TextToSpeech"}}
+       // options={{headerShown:false}}
+      />
+    </Stack.Navigator>
+*/
